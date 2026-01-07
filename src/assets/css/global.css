@@ -1,0 +1,226 @@
+/* =========================
+   Fuentes locales
+========================= */
+
+/* Inter */
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/inter-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Playfair Display */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../fonts/playfairdisplay-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================
+   Variables globales
+========================= */
+
+:root {
+  /* Colores */
+  --color-primary: #1F3A4D;    /* Azul petróleo */
+  --color-secondary: #E0B973;  /* Arena dorada */
+  --color-bg: #F8F9FA;
+  --color-text: #1C1C1C;
+  --color-muted: #6B7280;
+  --color-border: #E5E7EB;
+
+  /* Tipografía */
+  --font-body: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+
+  /* Layout */
+  --max-width: 1200px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+
+  /* Transiciones */
+  --transition: 0.2s ease;
+}
+
+/* =========================
+   Reset base
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* =========================
+   Tipografía
+========================= */
+
+h1, h2 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-primary);
+  margin: 0 0 0.75em;
+}
+
+h1 {
+  font-size: 3rem;      /* 48px */
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2.25rem;   /* 36px */
+  line-height: 1.2;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+}
+
+h3 {
+  font-size: 1.5rem;    /* 24px */
+}
+
+p {
+  margin: 0 0 1em;
+  color: var(--color-text);
+}
+
+small {
+  color: var(--color-muted);
+}
+
+/* =========================
+   Enlaces
+========================= */
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+/* =========================
+   Layout helpers
+========================= */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+/* =========================
+   Botones
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #1C1C1C;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+}
+
+/* =========================
+   Blog / texto largo
+========================= */
+
+.article {
+  max-width: 68ch;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.75rem; }
+
+  .section {
+    padding: 3rem 0;
+  }
+}

@@ -1,0 +1,146 @@
+/* =========================
+   Layout global: header, menú, footer
+========================= */
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-transparent {
+  background: transparent;
+}
+
+.header.scrolled {
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.header.scrolled .logo {
+  color: var(--color-primary);
+}
+
+.logo img {
+  width: 32px;
+}
+
+/* Nav desktop */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-desktop a {
+  font-weight: 500;
+  color: #fff;
+}
+
+.header.scrolled .nav-desktop a {
+  color: var(--color-primary);
+}
+
+/* Botón hamburguesa */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled .menu-btn span {
+  background: var(--color-primary);
+}
+
+/* Menú móvil (off-canvas) */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  padding: 5rem 2rem;
+  transition: right 0.3s ease;
+  z-index: 1001;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--color-muted);
+  background: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .menu-btn {
+    display: flex;
+  }
+}
