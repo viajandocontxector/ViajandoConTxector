@@ -1,0 +1,103 @@
+
+/* =========================
+ Hero simple para contacto
+========================= */
+.hero-simple {
+  background: #fff;
+  padding-top: 100px; /* Ajusta según la altura real del header */
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.hero-simple .hero-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero-simple .hero-text h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-simple .hero-text p {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjetas de contacto */
+.cards-contacto {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Si añades formulario, puedes personalizarlo aquí */
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  margin: 2rem auto 0;
+}
+.form-contacto input,
+.form-contacto textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.5rem;
+}
+.form-contacto button {
+  align-self: flex-end;
+}
+
+
+.form-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px;
+  margin: 2rem auto 0;
+}
+
+.form-contacto input,
+.form-contacto textarea,
+.form-contacto select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  margin-bottom: 0.5rem;
+  background: #fff;
+  color: var(--color-text);
+}
+
+.form-contacto textarea {
+  resize: vertical;
+}
+
+.form-contacto button {
+  align-self: center;
+}
+
+.form-contacto [data-captcha] {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+
+.obligatorio {
+  color: #e74c3c;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-contacto { gap: 1rem; }
+}

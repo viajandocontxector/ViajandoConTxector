@@ -1,31 +1,30 @@
+
 /* =========================
-   Home completo
+ Home completo
 ========================= */
 
 /* ===== Hero ===== */
 .hero {
   position: relative;
-  color: #fff; /* texto blanco garantizado */
+  color: #fff;
   height: 80vh;
   min-height: 500px;
   display: flex;
   align-items: center;
   overflow: hidden;
 }
-
 /* Imagen de fondo */
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/hero.jpg'); /* reemplaza con tu imagen */
+  background-image: url('../img/hero.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.45); /* oscurecer más para legibilidad */
-  transform: scale(1.05); /* zoom inicial para parallax */
+  filter: brightness(0.45);
+  transform: scale(1.05);
   transition: transform 0.5s ease;
   z-index: 0;
 }
-
 /* Overlay tipo gradiente para mejorar contraste */
 .hero::after {
   content: '';
@@ -34,7 +33,6 @@
   background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
   z-index: 0;
 }
-
 /* Hero grid (contenido encima de la imagen) */
 .hero-grid {
   position: relative;
@@ -46,9 +44,8 @@
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  text-align: center; /* centra texto hero */
+  text-align: center;
 }
-
 /* Texto hero */
 .hero-text h1 {
   font-size: 3rem;
@@ -56,7 +53,6 @@
   margin-bottom: 1rem;
   color: #fff;
 }
-
 .hero-text p {
   font-size: 1.125rem;
   margin-bottom: 2rem;
@@ -65,7 +61,6 @@
   margin-right: auto;
   color: #fff;
 }
-
 /* Botón hero */
 .hero-text .btn-primary {
   background: var(--color-primary);
@@ -75,62 +70,50 @@
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  transition: background 0.3s ease;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-
-.hero-text .btn-primary:hover {
-  background: #2a8a56; /* verde un poco más oscuro */
+.hero-text .btn-primary:hover,
+.hero-text .btn-primary:focus-visible {
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(31, 58, 77, 0.15);
 }
 
 /* ===== Tarjetas ===== */
 .section h2 {
-  text-align: center; /* centra títulos */
+  text-align: center;
   margin-bottom: 2rem;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
   max-width: 1000px;
-  margin: 0 auto 3rem; /* centra y separación inferior */
+  margin: 0 auto 3rem;
 }
-
 .card {
   background: #fff;
   border-radius: var(--radius-md);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
   padding: 1.5rem;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
-
-.card h3 {
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
-}
-
-.card p {
-  font-size: 1rem;
-  color: var(--color-text);
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(31, 58, 77, 0.12);
+  border-color: var(--color-secondary);
 }
 
 /* ===== CTA ===== */
 .cta {
   background: var(--color-primary);
-  color: #fff; /* asegurar que todo el texto sea blanco */
-  text-align: center; /* centra h2, p y botón */
+  color: #fff;
+  text-align: center;
   padding: 4rem 1rem;
 }
-
-.cta h2 {
-  margin-bottom: 1.5rem;
-  color: #fff; /* asegurar blanco */
-}
-
-.cta p {
-  color: #fff; /* por si hay párrafos */
-}
-
+.cta h2 { margin-bottom: 1.5rem; color: #fff; }
+.cta p { color: #fff; }
 .cta .btn-secondary {
   background: var(--color-secondary);
   color: #1C1C1C;
@@ -140,39 +123,43 @@
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
-  transition: background 0.3s ease;
+  transition: background 0.3s, box-shadow 0.3s;
 }
-
-.cta .btn-secondary:hover {
-  background: #ffdb4d; /* un poco más intenso */
+.cta .btn-secondary:hover,
+.cta .btn-secondary:focus-visible {
+  background: var(--color-secondary-dark);
+  box-shadow: 0 4px 16px rgba(224, 185, 115, 0.15);
 }
 
 /* ===== Ajustes de enlaces en secciones ===== */
 .section a {
   color: var(--color-primary);
   text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
 }
-
+.section a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.section a:hover::after {
+  width: 100%;
+}
 .section a:hover {
-  text-decoration: underline;
+  color: var(--color-secondary);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .cards {
-    gap: 1rem;
-  }
-
-  .btn-primary, .btn-secondary {
-    width: 100%;
-    text-align: center;
-  }
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text p { font-size: 1rem; }
+  .cards { gap: 1rem; }
+  .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }

@@ -1,8 +1,9 @@
+
 /* =========================
-   Layout global: header, menú, footer
+ Layout global: header, menú, footer
 ========================= */
 
-/* Header */
+/* Header base */
 .header {
   position: fixed;
   top: 0;
@@ -11,15 +12,22 @@
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.header-transparent {
-  background: transparent;
-}
+/* Estado transparente (home antes del scroll) */
+.header-transparent { background: transparent; }
 
+/* Estado con scroll (home tras el scroll) */
 .header.scrolled {
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
+/* === NUEVO: estado estático para páginas secundarias (Servicio/Contacto) === */
+.header--static {
+  background: #fff !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* Contenedor interno del header */
 .header-inner {
   display: flex;
   align-items: center;
@@ -27,37 +35,45 @@
   height: 80px;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  color: #fff;
-}
+/* Logo (solo imagen) */
+.logo { display: flex; align-items: center; }
+.logo-img { width: 180px; height: auto; transition: filter 0.3s; }
 
-.header.scrolled .logo {
-  color: var(--color-primary);
-}
-
-.logo img {
-  width: 32px;
-}
-
-/* Nav desktop */
+/* Navegación desktop */
 .nav-desktop {
   display: flex;
   align-items: center;
   gap: 1.5rem;
 }
-
 .nav-desktop a {
   font-weight: 500;
-  color: #fff;
+  position: relative;
+  transition: color 0.3s;
 }
 
-.header.scrolled .nav-desktop a {
+/* Home antes del scroll → enlaces blancos */
+.header:not(.scrolled):not(.header--static) .nav-desktop a { color: #fff; }
+
+/* Con scroll o estático → enlaces corporativos */
+.header.scrolled .nav-desktop a,
+.header.header--static .nav-desktop a {
   color: var(--color-primary);
 }
+
+/* Subrayado animado en hover (desktop y móvil) */
+.nav-desktop a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.nav-desktop a:hover::after { width: 100%; }
+.nav-desktop a:hover { color: var(--color-secondary); }
 
 /* Botón hamburguesa */
 .menu-btn {
@@ -68,15 +84,15 @@
   border: none;
   cursor: pointer;
 }
-
 .menu-btn span {
   width: 24px;
   height: 2px;
+  transition: background 0.3s;
+  /* En home transparente → blanco, en scroll/estático → corporativo */
   background: #fff;
-  transition: all 0.3s ease;
 }
-
-.header.scrolled .menu-btn span {
+.header.scrolled .menu-btn span,
+.header.header--static .menu-btn span {
   background: var(--color-primary);
 }
 
@@ -93,22 +109,33 @@
   transition: right 0.3s ease;
   z-index: 1001;
 }
-
-.mobile-menu.open {
-  right: 0;
-}
-
+.mobile-menu.open { right: 0; }
 .mobile-menu nav {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
+/* Enlaces del móvil: corporativos */
 .mobile-menu a {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--color-primary);
+  position: relative;
+  transition: color 0.3s;
 }
+.mobile-menu a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.mobile-menu a:hover::after { width: 100%; }
+.mobile-menu a:hover { color: var(--color-secondary); }
 
 /* Overlay */
 .menu-overlay {
@@ -120,7 +147,6 @@
   transition: opacity 0.3s ease;
   z-index: 1000;
 }
-
 .menu-overlay.open {
   opacity: 1;
   pointer-events: all;
@@ -134,13 +160,33 @@
   background: #fff;
 }
 
+/* ===== Hero simple (sin imagen) para páginas estáticas ===== */
+.hero.hero-simple {
+  background: #fff;
+  /* Evita solape con header fijo (≈ 80px). Pon 100px para respirar. */
+  padding-top: 100px;
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.hero.hero-simple .hero-grid {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.hero.hero-simple .hero-text h1 {
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero.hero-simple .hero-text p {
+  color: var(--color-text);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .nav-desktop {
-    display: none;
-  }
-
-  .menu-btn {
-    display: flex;
-  }
+  .nav-desktop { display: none; }
+  .menu-btn { display: flex; }
+  .logo-img { width: 150px; }
 }

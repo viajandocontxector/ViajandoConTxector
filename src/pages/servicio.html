@@ -1,45 +1,117 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Servicio · TxectorRoutes</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicio · Txector Routes</title>
+  <meta name="description" content="Organización completa de viajes a medida. Planifica tu viaje con libertad y asesoramiento experto." />
 
-  <link rel="stylesheet" href="../assets/css/main.css">
+  <!-- Favicon -->
+  <link rel="icon" href="../assets/img/logo/favicon/favicon.ico" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/servicio.css" />
+  <link rel="stylesheet" href="../assets/css/plugins/aos.css" />
+  <link rel="stylesheet" href="../assets/css/plugins/glightbox.min.css" />
+  <link rel="stylesheet" href="../assets/css/plugins/swiper-bundle.min.css" />
 </head>
-<body>
+<body data-header="static">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-<header>
-  <div class="container header-inner">
-    <strong>TxectorRoutes</strong>
-    <nav>
+  <!-- Header SIEMPRE BLANCO en esta página -->
+  <header class="header header--static">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Inicio">
+        <img class="logo-img"
+             src="../assets/img/logo/principal/logo-horizontal-color.png"
+             alt="Txector Routes"
+             data-logo-dark="../assets/img/logo/principal/logo-horizontal-color.png"
+             data-logo-light="../assets/img/logo/principal/logo-horizontal-blanco.png" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicio.html" aria-current="page">Servicio</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+
+      <button class="menu-btn" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menú móvil y overlay -->
+  <div class="menu-overlay" aria-hidden="true"></div>
+  <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav aria-label="Navegación móvil">
       <a href="index.html">Inicio</a>
-      <a href="servicio.html">Servicio</a>
+      <a href="servicio.html" aria-current="page">Servicio</a>
       <a href="contacto.html">Contacto</a>
     </nav>
-  </div>
-</header>
+  </aside>
 
-<main class="container section">
-  <h1>Qué ofrezco</h1>
-  <p>
-    Organización completa de viajes a medida.
-    No reservo por ti: te doy el plan perfecto para que reserves con total libertad.
-  </p>
+  <main id="main">
+    <!-- HERO SIMPLE -->
+    <section class="hero hero-simple" aria-labelledby="servicio-hero-title">
+      <div class="hero-grid">
+        <div class="hero-text" data-aos="fade-up">
+          <h1 id="servicio-hero-title">Servicio de viajes a medida</h1>
+          <p>Organización completa de viajes personalizados. Tú reservas, yo te ayudo a diseñar el viaje perfecto.</p>
+        </div>
+      </div>
+    </section>
 
-  <ul>
-    <li>Ruta diaria optimizada</li>
-    <li>Recomendaciones de alojamiento</li>
-    <li>Transportes entre ciudades</li>
-    <li>Consejos reales y prácticos</li>
-  </ul>
-</main>
+    <!-- SECCIÓN DETALLE SERVICIO -->
+    <section class="section" aria-labelledby="detalle-servicio-title">
+      <div class="container">
+        <h2 id="detalle-servicio-title">¿Qué incluye mi servicio?</h2>
+        <div class="cards cards-servicio" data-aos="fade-up">
+          <article class="card">
+            <h3>Ruta diaria optimizada</h3>
+            <p>Itinerario detallado para aprovechar cada día al máximo.</p>
+          </article>
+          <article class="card">
+            <h3>Alojamientos recomendados</h3>
+            <p>Opciones adaptadas a tu estilo y presupuesto.</p>
+          </article>
+          <article class="card">
+            <h3>Transportes entre ciudades</h3>
+            <p>Consejos para moverte fácil y rápido.</p>
+          </article>
+          <article class="card">
+            <h3>Consejos prácticos</h3>
+            <p>Recomendaciones reales y personalizadas para tu viaje.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  <div class="container">
-    <p>© 2026 TxectorRoutes</p>
-  </div>
-</footer>
+    <!-- CTA -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">¿Quieres tu viaje a medida?</h2>
+        <p>Contacta y empieza a planificar tu próxima aventura.</p>
+        <a class="btn btn-secondary" href="contacto.html">Solicita tu plan</a>
+      </div>
+    </section>
+  </main>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <small>© 2026 Txector Routes · Viajes a medida</small>
+    </div>
+  </footer>
+
+  <!-- JS Plugins (defer) -->
+  <script defer src="../assets/js/plugins/aos.js"></script>
+  <script defer src="../assets/js/plugins/glightbox.min.js"></script>
+  <script defer src="../assets/js/plugins/swiper-bundle.min.js"></script>
+  <!-- JS principal -->
+  <script defer src="../assets/js/main.js"></script>
 </body>
 </html>
