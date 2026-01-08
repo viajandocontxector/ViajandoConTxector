@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (wasSubmitted) {
       sessionStorage.removeItem('contact_submitted');
       // replace() evita que "Atrás" vuelva al formulario con datos
-      window.location.replace('/src/pages/gracias.html'); // ajusta la ruta si es distinta
+      window.location.replace('/pages/gracias.html'); // ajusta la ruta si es distinta
       return;
     }
   } catch (e) { /* ignora storage bloqueado */ }
