@@ -209,3 +209,22 @@ a:focus-visible {
   h2 { font-size: 1.75rem; }
   .section { padding: 3rem 0; }
 }
+
+
+/* =========================
+ Footer al final de la página
+========================= */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa toda la altura de la ventana */
+}
+
+main {
+  flex: 1; /* hace que el contenido principal ocupe el espacio disponible */
+}

@@ -153,12 +153,85 @@
 }
 
 /* Footer */
+
+
+/* Footer base que ya tienes */
 .footer {
   padding: 2rem 0;
   text-align: center;
   color: var(--color-muted);
   background: #fff;
+  font-size: 0.95rem;
+  border-top: 1px solid var(--color-border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
 }
+
+/* Enlaces legales del footer */
+.footer a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  margin: 0 0.25em;
+  transition: color 0.2s ease;
+}
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--color-secondary);
+}
+
+/* Bloque redes sociales */
+.footer-social {
+  margin-top: 0.75rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Botones/iconos de redes */
+.footer-social .social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;   /* tamaño del botón */
+  height: 40px;
+  border-radius: 50%;
+  color: var(--color-primary);      /* controla el color del icono via currentColor */
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+  transition: transform 0.15s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.footer-social .social-link:hover,
+.footer-social .social-link:focus-visible {
+  color: var(--color-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(31,58,77,0.12);
+}
+
+/* SVG iconos */
+.footer-social .icon {
+  width: 22px;
+  height: 22px;
+  fill: currentColor; /* usa el color del enlace (primary/secondary) */
+}
+
+/* Accesibilidad (si quieres resaltar el foco teclado) */
+.footer-social .social-link:focus-visible {
+  outline: 3px solid #7aa0b9;
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .footer-social .social-link {
+    width: 36px;
+    height: 36px;
+  }
+  .footer-social .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
 
 /* ===== Hero simple (sin imagen) para páginas estáticas ===== */
 .hero.hero-simple {
