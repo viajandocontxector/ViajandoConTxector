@@ -32,10 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // Páginas estáticas (Servicio/Contacto): siempre blanco, logo a color
       header.classList.add('header--static');
       header.classList.remove('header-transparent', 'scrolled');
-      // Si usas data-logo-dark/light en Home, aquí forzamos el "dark" (color)
-      if (logoImg?.getAttribute('data-logo-dark')) {
-        logoImg.src = logoImg.getAttribute('data-logo-dark');
-      }
       return;
     }
 
