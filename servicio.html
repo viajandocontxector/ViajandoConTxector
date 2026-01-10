@@ -4,38 +4,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Txector Routes · Viajes a medida</title>
-  <meta name="description" content="Viajes diseñados a tu medida: planificación, rutas y asesoramiento práctico." />
+  <title>Servicio · Txector Routes</title>
+  <meta name="description" content="Organización completa de viajes a medida. Planifica tu viaje con libertad y asesoramiento experto." />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/index.css">
-  <link rel="stylesheet" href="assets/css/plugins/aos.css">
-  <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css">
-  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/servicio.css" />
+  <link rel="stylesheet" href="assets/css/plugins/aos.css" />
+  <link rel="stylesheet" href="assets/css/plugins/glightbox.min.css" />
+  <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css" />
 </head>
-<body>
-  <a href="#main" class="skip-link">Saltar al contenido</a>
+<body data-header="static">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- Header -->
-  <header class="header header-transparent">
+  <!-- Header SIEMPRE BLANCO en esta página -->
+  <header class="header header--static">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <img
-          class="logo-img"
-          src="assets/img/logo/logo-horizontal-color.png"
-          alt="Txector Routes"
-        />
+      <a class="logo" href="/" aria-label="Inicio">
+        <img class="logo-img"
+             src="assets/img/logo/logo-horizontal-color.png"
+             alt="Txector Routes"/>
       </a>
+
       <nav class="nav-desktop" aria-label="Navegación principal">
         <a href="/">Inicio</a>
-        <a href="servicio.html">Servicio</a>
+        <a href="servicio.html" aria-current="page">Servicio</a>
         <a href="contacto.html">Contacto</a>
       </nav>
+
       <button class="menu-btn" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -47,40 +47,42 @@
   <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
     <nav aria-label="Navegación móvil">
       <a href="/">Inicio</a>
-      <a href="servicio.html">Servicio</a>
+      <a href="servicio.html" aria-current="page">Servicio</a>
       <a href="contacto.html">Contacto</a>
     </nav>
   </aside>
 
   <main id="main">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-bg" role="presentation"></div>
+    <!-- HERO SIMPLE -->
+    <section class="hero hero-simple" aria-labelledby="servicio-hero-title">
       <div class="hero-grid">
         <div class="hero-text" data-aos="fade-up">
-          <h1 id="hero-title">Viajes diseñados a tu medida</h1>
-          <p>Te ayudo a planificar viajes únicos, sin estrés y adaptados a tu forma de viajar.</p>
-          <a class="btn btn-primary" href="contacto.html">Empieza tu viaje</a>
+          <h1 id="servicio-hero-title">Servicio de viajes a medida</h1>
+          <p>Organización completa de viajes personalizados. Tú reservas, yo te ayudo a diseñar el viaje perfecto.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECCIÓN TARJETAS -->
-    <section class="section" aria-labelledby="servicios-title">
+    <!-- SECCIÓN DETALLE SERVICIO -->
+    <section class="section" aria-labelledby="detalle-servicio-title">
       <div class="container">
-        <h2 id="servicios-title">¿Cómo puedo ayudarte?</h2>
-        <div class="cards" data-aos="fade-up">
+        <h2 id="detalle-servicio-title">¿Qué incluye mi servicio?</h2>
+        <div class="cards cards-servicio" data-aos="fade-up">
           <article class="card">
-            <h3>Viajes personalizados</h3>
-            <p>Rutas y experiencias pensadas solo para ti.</p>
+            <h3>Ruta diaria optimizada</h3>
+            <p>Itinerario detallado para aprovechar cada día al máximo.</p>
           </article>
           <article class="card">
-            <h3>Optimización de tiempo</h3>
-            <p>Olvídate de horas buscando información.</p>
+            <h3>Alojamientos recomendados</h3>
+            <p>Opciones adaptadas a tu estilo y presupuesto.</p>
           </article>
           <article class="card">
-            <h3>Asesoramiento real</h3>
-            <p>Recomendaciones honestas y prácticas.</p>
+            <h3>Transportes entre ciudades</h3>
+            <p>Consejos para moverte fácil y rápido.</p>
+          </article>
+          <article class="card">
+            <h3>Consejos prácticos</h3>
+            <p>Recomendaciones reales y personalizadas para tu viaje.</p>
           </article>
         </div>
       </div>
@@ -89,13 +91,12 @@
     <!-- CTA -->
     <section class="cta" aria-labelledby="cta-title">
       <div class="container">
-        <h2 id="cta-title">¿Hablamos de tu próximo viaje?</h2>
-        <p>Cuéntame tu idea y le damos forma juntos.</p>
-        <a class="btn btn-secondary" href="contacto.html">Contactar</a>
+        <h2 id="cta-title">¿Quieres tu viaje a medida?</h2>
+        <p>Contacta y empieza a planificar tu próxima aventura.</p>
+        <a class="btn btn-secondary" href="contacto.html">Solicita tu plan</a>
       </div>
     </section>
   </main>
-
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -132,12 +133,11 @@
     </div>
   </footer>
 
-
-  <!-- JS Plugins (defer para no bloquear) -->
-  <script src="assets/js/plugins/aos.js" defer></script>
-  <script src="assets/js/plugins/glightbox.min.js" defer></script>
-  <script src="assets/js/plugins/swiper-bundle.min.js" defer></script>
+  <!-- JS Plugins (defer) -->
+  <script defer src="assets/js/plugins/aos.js"></script>
+  <script defer src="assets/js/plugins/glightbox.min.js"></script>
+  <script defer src="assets/js/plugins/swiper-bundle.min.js"></script>
   <!-- JS principal -->
-  <script src="assets/js/main.js" defer></script>
+  <script defer src="assets/js/main.js"></script>
 </body>
 </html>
