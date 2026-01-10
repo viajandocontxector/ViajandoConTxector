@@ -7,27 +7,32 @@
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/pages/servicio.html</loc>
+    <loc>https://txectorroutes.com/servicio</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/pages/contacto.html</loc>
+    <loc>https://txectorroutes.com/contacto</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/pages/legal/aviso-legal.html</loc>
+    <loc>https://txectorroutes.com/gracias</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/pages/legal/cookies.html</loc>
+    <loc>https://txectorroutes.com/legal/aviso-legal</loc>
     <priority>0.5</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/pages/legal/privacidad.html</loc>
+    <loc>https://txectorroutes.com/legal/cookies</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://txectorroutes.com/legal/privacidad</loc>
     <priority>0.5</priority>
   </url>
 
