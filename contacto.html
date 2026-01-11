@@ -82,32 +82,20 @@
         <h1>Contacto</h1>
         <p>Cuéntame tu idea de viaje y te ayudo a hacerla realidad.</p>
       </div>
-      <form class="form-contacto" action="https://formspree.io/f/xkogdebj" method="POST" onsubmit="try{ sessionStorage.setItem('contact_submitted','1'); }catch(e){}">
+      <form class="form-contacto" id="contact-form">
         <input type="text" name="nombre" placeholder="Nombre" required>
         <input type="email" name="email" placeholder="Email" required>
-        <select name="tipo_viaje" required>
-          <option value="" disabled selected>Tipo de viaje</option>
-          <option value="Pareja">Pareja</option>
-          <option value="Amigos">Amigos</option>
-          <option value="Single">Single</option>
-          <option value="Otro">Otro</option>
-        </select>
         <input type="text" name="destino" placeholder="Destino o idea de viaje" required>
+        <input type="number" name="personas" placeholder="Número de personas" required min="1">
         <input type="text" name="fechas" placeholder="Fechas aproximadas" required>
-        <input type="text" name="presupuesto" placeholder="Presupuesto aproximado" required>
-        <textarea name="mensaje" placeholder="Cuéntame tu idea de viaje" rows="6" required></textarea>
-        <!-- Campos opcionales -->
-        <input type="number" name="personas" placeholder="Nº de personas (opcional)">
-        <input type="text" name="ciudades_salida" placeholder="Ciudad de salida  (opcional)">
-        <select name="ritmo_viaje">
-          <option value="" disabled selected>Ritmo de viaje (opcional)</option>
-          <option value="Tranquilo">Tranquilo</option>
-          <option value="Intenso">Intenso</option>
-        </select>
-        <!-- Captcha de Formspree -->
-        <div data-captcha="true"></div>
+        <textarea name="mensaje" placeholder="Cuéntame tu idea del viaje" rows="6" required></textarea>
+        <!-- Honeypot antispam (campo invisible) -->
+        <input type="text" name="website" id="website" style="display:none">
+        <!-- Timestamp antispam -->
+        <input type="hidden" name="form_start" id="form_start">
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
+
     </div>
   </main>
 
@@ -152,5 +140,6 @@
   <script defer src="assets/js/plugins/swiper-bundle.min.js"></script>
   <!-- JS principal -->
   <script defer src="assets/js/main.js"></script>
+  <script defer src="assets/js/contacto.js"></script>
 </body>
 </html>

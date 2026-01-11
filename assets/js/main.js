@@ -126,24 +126,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateParallax();
     window.addEventListener('scroll', onScrollParallax, { passive: true });
   }
-
-  // REDIRECT A PÁGINA GRACIAS
-  // Si venimos de haber enviado el form (misma pestaña y sesión),
-  // redirigimos directamente a la página de gracias.
-  try {
-    const wasSubmitted = sessionStorage.getItem('contact_submitted') === '1';
-    if (wasSubmitted) {
-      sessionStorage.removeItem('contact_submitted');
-      // replace() evita que "Atrás" vuelva al formulario con datos
-      window.location.replace('/pages/gracias.html'); // ajusta la ruta si es distinta
-      return;
-    }
-  } catch (e) { /* ignora storage bloqueado */ }
-
-  // Opcional: si vuelven con el back-forward cache, limpia el formulario
-  const form = document.querySelector('.form-contacto');
-  window.addEventListener('pageshow', (evt) => {
-    if (evt.persisted) form?.reset();
-  });
-
 });

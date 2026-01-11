@@ -1,0 +1,24 @@
+{
+  "name": "txector-routes-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/txectorroutes/TxectorRoutesWeb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/txectorroutes/TxectorRoutesWeb/issues"
+  },
+  "homepage": "https://github.com/txectorroutes/TxectorRoutesWeb#readme",
+  "dependencies": {
+    "resend": "^6.7.0"
+  }
+}
