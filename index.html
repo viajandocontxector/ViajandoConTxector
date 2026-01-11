@@ -21,6 +21,20 @@
     });
   </script>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const cy = document.querySelector('#cookieyes');
+
+      // Si CookieYes está bloqueado como text/plain, lo reactivamos
+      if (cy && cy.getAttribute('type') === 'text/plain') {
+        cy.removeAttribute('type');
+        const clone = cy.cloneNode(true);
+        cy.parentNode.replaceChild(clone, cy);
+      }
+    });
+  </script>
+
+
   <!-- Google Analytics 4 (bloqueado hasta consentimiento) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-EMKW5P5Z7N" type="text/plain" data-cookieyes="analytics" data-cookie-category="analytics"></script>
 
