@@ -257,6 +257,11 @@
   margin-bottom: 2rem;
 }
 
+.hero.hero-simple .hero-text li {
+  list-style-type: none;
+}
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .nav-desktop { display: none; }

@@ -228,3 +228,166 @@ body {
 main {
   flex: 1; /* hace que el contenido principal ocupe el espacio disponible */
 }
+
+/* Garantiza que cualquier elemento con [hidden] esté oculto */
+[hidden] { display: none !important; }
+
+/* =========================
+ Banner de Cookies (fijo abajo)
+========================= */
+.cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; width: 100%;
+  background: #fff;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cookie-content { flex: 1 1 520px; }
+.cookie-title-text { margin: 0 0 0.5rem; font-size: 1.25rem; line-height: 1.5; color: var(--color-primary); font-weight: 600;}
+.cookie-main-text { margin: 0 0 0.5rem; font-size: 0.95rem; line-height: 1; }
+.cookie-link-text { margin: 0; font-size: 0.9rem; line-height: 1; }
+.cookie-link-text a { color: var(--color-primary); text-decoration: underline; font-weight: 500; }
+
+.cookie-buttons {
+  display: flex; gap: 0.5rem; flex: 0 0 auto; justify-content: flex-end;
+}
+
+.cookie-buttons .btn-primary,
+.cookie-buttons .btn-secondary {
+  padding: 0.55rem 1.2rem;
+  border: none; border-radius: 4px;
+  font-size: 0.9rem; cursor: pointer;
+  transition: all 0.25s ease;
+}
+.cookie-buttons .btn-primary { background: var(--color-primary); color: #fff; }
+.cookie-buttons .btn-primary:hover,
+.cookie-buttons .btn-primary:focus-visible {
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 16px rgba(31, 58, 77, 0.15);
+}
+.cookie-buttons .btn-secondary { background: var(--color-secondary); color: var(--color-primary); }
+.cookie-buttons .btn-secondary:hover,
+.cookie-buttons .btn-secondary:focus-visible {
+  background: var(--color-secondary-dark);
+  box-shadow: 0 4px 16px rgba(31, 58, 77, 0.15);
+}
+
+/* Responsive: en móviles apilar */
+@media (max-width: 640px) {
+  .cookie-banner { align-items: flex-start; }
+  .cookie-buttons { width: 100%; justify-content: flex-start; }
+}
+
+/* =========================
+ Modal de personalización
+========================= */
+
+.cookie-settings {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.cookie-modal {
+  background: #fff;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.cookie-modal h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.intro-text {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: var(--color-muted);
+}
+
+.cookie-category {
+  margin-bottom: 1rem;
+}
+
+.cookie-category h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-category .always-on {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+  font-style: italic;
+}
+
+.category-desc {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-muted);
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+/* =========================
+ Botón flotante (cookie)
+========================= */
+.manage-cookies {
+  position: fixed; bottom: 1rem; left: 1rem;
+  width: 36px; height: 36px;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: 1px solid #fff; /* borde fino para contraste */
+  border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(31,58,77,0.15);
+  cursor: pointer; z-index: 9998;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.manage-cookies:hover,
+.manage-cookies:focus-visible { background-color: var(--color-primary-dark); transform: scale(1.03); }
+.manage-cookies svg { width: 24px; height: 24px; fill: var(--color-secondary); display: block; }
+
+/* =========================
+ Placeholder para iframes bloqueados
+========================= */
+.cookie-iframe-blocked {
+  background: #fff; border: 1px dashed var(--color-border); color: var(--color-muted);
+  font-family: var(--font-body); font-size: 0.95rem;
+  min-height: 240px; padding: 1rem; display: grid; place-items: center; text-align: center;
+}
+.cookie-iframe-blocked .cta {
+  margin-top: 0.5rem; display: inline-block;
+  background: var(--color-secondary); color: var(--color-primary);
+  padding: 0.45rem 0.9rem; border-radius: 4px; cursor: pointer;
+}
+.cookie-iframe-blocked .cta:hover { background: var(--color-secondary-dark); box-shadow: 0 4px 16px rgba(31,58,77,0.15); }
