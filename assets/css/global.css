@@ -125,6 +125,9 @@ a:focus-visible {
  Layout helpers
 ========================= */
 .container { max-width: var(--max-width); margin: 0 auto; padding: 0 1rem; }
+.container li {
+    list-style-type: none;
+}
 .section { padding: 4rem 0; }
 .skip-link {
   position: absolute; left: -9999px; top: auto;
