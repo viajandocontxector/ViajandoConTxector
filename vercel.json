@@ -1,3 +1,9 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+      {
+        "source": "/test/", "destination": "/test", "statusCode": 308
+      }
+    ]
+
 }
