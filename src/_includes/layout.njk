@@ -2,58 +2,26 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <!-- Head común -->
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <title>{{ title or "Txector Routes" }}</title>
-  {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-
-  {# Canonical opcional por página #}
-  {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Txector Routes">
-  <meta property="og:title" content="{{ ogTitle or title }}">
-  {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
-  {% if ogUrl %}<meta property="og:url" content="{{ ogUrl }}">{% endif %}
-  {% if ogImage %}<meta property="og:image" content="{{ ogImage }}">{% endif %}
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ twitterTitle or title }}">
-  {% if description %}<meta name="twitter:description" content="{{ description }}">{% endif %}
-  {% if twitterImage %}<meta name="twitter:image" content="{{ twitterImage }}">{% endif %}
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/assets/css/global.css" />
-  <link rel="stylesheet" href="/assets/css/layout.css" />
-  <link rel="stylesheet" href="/assets/css/contacto.css" />
-  <link rel="stylesheet" href="/assets/css/plugins/aos.css" />
-  <link rel="stylesheet" href="/assets/css/plugins/glightbox.min.css" />
-  <link rel="stylesheet" href="/assets/css/plugins/swiper-bundle.min.css" />
+  {% include "head-common.njk" %}
 </head>
 
 <body data-header="{{ headerStyle or 'static' }}">
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  {# Aquí, si quieres, puedes incluir tu header:
-     {% include "header.njk" %} #}
+  {% include "header.njk" %}
 
   <main id="main">
     {{ content | safe }}
   </main>
 
   {% include "footer.njk" %}
+  {% include "cookies-layout.njk" %}
 
   <!-- JS Plugins (defer) -->
   <script defer src="/assets/js/plugins/aos.js"></script>
   <script defer src="/assets/js/plugins/glightbox.min.js"></script>
   <script defer src="/assets/js/plugins/swiper-bundle.min.js"></script>
+
   <!-- JS principal -->
   <script defer src="/assets/js/main.js"></script>
 </body>

@@ -1,0 +1,75 @@
+
+<!-- Banner de Cookies -->
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-live="polite" aria-label="Aviso de cookies" style="display:none">
+  <div class="cookie-content">
+    <p class="cookie-title-text">Valoramos tu privacidad</p>
+    <p class="cookie-main-text">
+      Utilizamos cookies para mejorar su experiencia de navegación, analizar el tráfico y ofrecer funcionalidades adicionales.
+    </p>
+    <p class="cookie-link-text">
+      Al hacer clic en "Aceptar todo" usted da su consentimiento a nuestro uso de las cookies.
+      <a href="/legal/cookies/">Política de Cookies</a>
+    </p>
+  </div>
+
+  <div class="cookie-buttons">
+    <button id="customize" class="btn-secondary">Personalizar</button>
+    <button id="reject-all" class="btn-secondary">Rechazar todo</button>
+    <button id="accept-all" class="btn-primary">Aceptar todo</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="cookie-settings" class="cookie-settings" style="display:none" aria-hidden="true">
+  <div class="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-settings-title">
+
+    <h3 id="cookie-settings-title">Preferencias de cookies</h3>
+    <p class="intro-text">
+      Usamos cookies para ayudarle a navegar de manera eficiente y realizar ciertas funciones.
+      Encontrará información detallada sobre cada categoría a continuación.
+    </p>
+
+    <!-- Necesarias -->
+    <div class="cookie-category">
+      <h4>Necesarias <span class="always-on">Siempre activas</span></h4>
+      <p class="category-desc">
+        Las cookies necesarias son cruciales para las funciones básicas del sitio web.
+      </p>
+      <label><input type="checkbox" checked disabled> Activadas por defecto</label>
+    </div>
+
+    <!-- Funcionales -->
+    <div class="cookie-category">
+      <h4>Funcionales</h4>
+      <p class="category-desc">Ayudan a realizar funcionalidades como mapas, compartir contenido, etc.</p>
+      <label><input type="checkbox" id="functional"> Permitir cookies funcionales</label>
+    </div>
+
+    <!-- Analíticas -->
+    <div class="cookie-category">
+      <h4>Analíticas</h4>
+      <p class="category-desc">Ayudan a comprender cómo interactúan los visitantes.</p>
+      <label><input type="checkbox" id="analytics"> Permitir cookies analíticas</label>
+    </div>
+
+    <!-- Marketing -->
+    <div class="cookie-category">
+      <h4>Marketing</h4>
+      <p class="category-desc">Se usan para anuncios personalizados.</p>
+      <label><input type="checkbox" id="marketing"> Permitir cookies de marketing</label>
+    </div>
+
+    <div class="cookie-buttons">
+      <button id="close-settings" class="btn-secondary">Cancelar</button>
+      <button id="save-preferences" class="btn-primary">Guardar preferencias</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Botón flotante -->
+<button id="manage-cookies" class="manage-cookies" aria-label="Gestionar cookies" hidden title="Gestionar cookies">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 1 0 10 10c0-.34-.02-.67-.05-1a3.5 3.5 0 0 1-4.45-4.45c-.33-.03-.66-.05-1-.05a3.5 3.5 0 0 1-3.5-3.5c0-.34.02-.67.05-1A10.02 10.02 0 0 0 12 2zm-1 5a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm-4 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0zm8 4a1 1 0 1 1 2 0 1 1 0 0 1-2 0z"/>
+  </svg>
+</button>

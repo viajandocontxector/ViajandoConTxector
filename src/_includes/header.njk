@@ -1,0 +1,32 @@
+
+<header class="header header--static">
+  <div class="container header-inner">
+
+    <a class="logo" href="/" aria-label="Inicio">
+      <img class="logo-img"
+           src="/assets/img/logo/logo-horizontal-color.png"
+           alt="Txector Routes">
+    </a>
+
+    <nav class="nav-desktop" aria-label="Navegación principal">
+      <a href="/">Inicio</a>
+      <a href="/servicio/" {% if page.url == "/servicio/" %}aria-current="page"{% endif %}>Servicio</a>
+      <a href="/contacto/" {% if page.url == "/contacto/" %}aria-current="page"{% endif %}>Contacto</a>
+    </nav>
+
+    <button class="menu-btn" aria-label="Abrir menú" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+  </div>
+</header>
+
+<div class="menu-overlay" aria-hidden="true"></div>
+
+<aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <nav aria-label="Navegación móvil">
+    <a href="/">Inicio</a>
+    <a href="/servicio/">Servicio</a>
+    <a href="/contacto/">Contacto</a>
+  </nav>
+</aside>
