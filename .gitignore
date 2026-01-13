@@ -1,0 +1,39 @@
+
+# ============================================
+#  Eleventy / Node / Vercel – Proyecto TxectorRoutes
+# ============================================
+
+# --- Carpetas generadas automáticamente ---
+_site/
+node_modules/
+
+# --- Archivos temporales de Node ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Caché de dependencias ---
+.cache/
+.eslintcache
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+
+# --- Archivos de editor/IDE ---
+.vscode/
+.idea/
+*.swp
+
+# --- Build de Vercel (solo si existiera localmente) ---
+.vercel/
+
+# --- Archivos que NO deben subirse jamás ---
+.env
+.env.local
+.env.*.local
+
+# --- Logs ---
+*.log
+logs/
