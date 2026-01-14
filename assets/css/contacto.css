@@ -100,7 +100,6 @@
   margin-left: 2px;
 }
 
-
 /* Responsive */
 @media (max-width: 768px) {
   .cards-contacto { gap: 1rem; }

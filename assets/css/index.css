@@ -17,7 +17,7 @@
 .hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('../img/hero.jpg');
+  background-image: url('/assets/img/hero.jpg');
   background-size: cover;
   background-position: center;
   filter: brightness(0.45);

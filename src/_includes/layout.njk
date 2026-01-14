@@ -24,5 +24,12 @@
 
   <!-- JS principal -->
   <script defer src="/assets/js/main.js"></script>
+
+  {% if pageScripts %}
+    {% for script in pageScripts %}
+      <script defer src="{{ script }}"></script>
+    {% endfor %}
+  {% endif %}
+
 </body>
 </html>
