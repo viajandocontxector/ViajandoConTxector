@@ -1,14 +1,12 @@
 {
   "cleanUrls": true,
   "redirects": [
-      {
-        "source": "/servicio/", "destination": "/servicio", "statusCode": 308,
-        "source": "/contacto/", "destination": "/contacto", "statusCode": 308,
-        "source": "/gracias/", "destination": "/gracias", "statusCode": 308,
-        "source": "/legal/aviso-legal/", "destination": "/legal/aviso-legal", "statusCode": 308,
-        "source": "/legal/cookies/", "destination": "/legal/cookies", "statusCode": 308,
-        "source": "/legal/privacidad/", "destination": "/legal/privacidad", "statusCode": 308,
-        "source": "/rutas/europa/paises-balticos-10-dias/", "destination": "/rutas/europa/paises-balticos-10-dias", "statusCode": 308
-      }
-    ]
+    { "source": "/servicio/", "destination": "/servicio", "statusCode": 308 },
+    { "source": "/contacto/", "destination": "/contacto", "statusCode": 308 },
+    { "source": "/gracias/", "destination": "/gracias", "statusCode": 308 },
+    { "source": "/legal/aviso-legal/", "destination": "/legal/aviso-legal", "statusCode": 308 },
+    { "source": "/legal/cookies/", "destination": "/legal/cookies", "statusCode": 308 },
+    { "source": "/legal/privacidad/", "destination": "/legal/privacidad", "statusCode": 308 },
+    { "source": "/rutas/europa/paises-balticos-10-dias/", "destination": "/rutas/europa/paises-balticos-10-dias", "statusCode": 308 }
+  ]
 }
