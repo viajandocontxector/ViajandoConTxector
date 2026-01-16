@@ -182,14 +182,18 @@
 .section a:hover { color: var(--color-secondary); }
 
 /* ===== Imágenes ===== */
+
+.section-image {
+  padding: 0;
+}
 .section-image img {
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: block;
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-md);
-  display: block;
-  margin: 0 auto;
-  max-width: var(--max-width);
 }
 
 /* ===== Carrusel ===== */
