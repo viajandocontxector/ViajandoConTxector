@@ -1,0 +1,42 @@
+---
+layout: layout.njk
+---
+
+<section class="hero hero-simple" aria-labelledby="post-title">
+    <div class="hero-grid">
+    <div class="hero-text" data-aos="fade-up">
+        <h1 id="post-title">{{ titleblog }}</h1>
+        {% if subtitleblog %}
+        <p>{{ subtitleblog }}</p>
+        {% endif %}
+    </div>
+    </div>
+</section>
+
+<section class="section" aria-labelledby="contenido-title">
+    <div class="container">
+    <div class="blog-layout">
+        <div class="blog-content">
+        {{ content | safe }}
+        </div>
+        {% set showSidebar = sidebar != false and sidebar != "false" %}
+        {% if showSidebar %}
+        <aside class="blog-sidebar">
+            {% if sidebarInclude %}
+            {% include sidebarInclude %}
+            {% else %}
+            {% include "sidebar.njk" %}
+            {% endif %}
+        </aside>
+        {% endif %}
+    </div>
+    </div>
+</section>
+
+<section class="cta" aria-labelledby="blog-cta-title">
+    <div class="container">
+        <h2 id="blog-cta-title">¿Quieres una ruta como esta, adaptada a ti?</h2>
+        <p>Puedo diseñar tu viaje a medida, optimizando tiempos, trayectos y ajustándolo a tu forma de viajar.</p>
+        <a class="btn btn-secondary" href="/contacto/">Diseñar mi viaje</a>
+    </div>
+</section>

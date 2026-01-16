@@ -1,9 +1,7 @@
-
 /* =========================
- Home completo
+ Home (hero con imagen)
 ========================= */
 
-/* ===== Hero ===== */
 .hero {
   position: relative;
   color: #fff;
@@ -13,6 +11,7 @@
   align-items: center;
   overflow: hidden;
 }
+
 /* Imagen de fondo */
 .hero-bg {
   position: absolute;
@@ -25,7 +24,8 @@
   transition: transform 0.5s ease;
   z-index: 0;
 }
-/* Overlay tipo gradiente para mejorar contraste */
+
+/* Overlay para contraste */
 .hero::after {
   content: '';
   position: absolute;
@@ -33,133 +33,21 @@
   background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%);
   z-index: 0;
 }
-/* Hero grid (contenido encima de la imagen) */
-.hero-grid {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  text-align: center;
-}
-/* Texto hero */
-.hero-text h1 {
-  font-size: 3rem;
-  line-height: 1.15;
-  margin-bottom: 1rem;
+
+/* Ajustes específicos del hero con imagen (no afectan al hero-simple) */
+.hero:not(.hero-simple) .hero-text h1,
+.hero:not(.hero-simple) .hero-text p {
   color: #fff;
 }
-.hero-text p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
+.hero:not(.hero-simple) .hero-text h1 {
+  font-size: 3rem; /* más grande en home */
+}
+.hero:not(.hero-simple) .hero-text p {
   max-width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #fff;
-}
-/* Botón hero */
-.hero-text .btn-primary {
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.75rem 2rem;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-.hero-text .btn-primary:hover,
-.hero-text .btn-primary:focus-visible {
-  background: var(--color-primary-dark);
-  box-shadow: 0 4px 16px rgba(31, 58, 77, 0.15);
 }
 
-/* ===== Tarjetas ===== */
-.section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto 3rem;
-}
-.card {
-  background: #fff;
-  border-radius: var(--radius-md);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
-  padding: 1.5rem;
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
-}
-.card:hover,
-.card:focus-within {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 12px 32px rgba(31, 58, 77, 0.12);
-  border-color: var(--color-secondary);
-}
-
-/* ===== CTA ===== */
-.cta {
-  background: var(--color-primary);
-  color: #fff;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.cta h2 { margin-bottom: 1.5rem; color: #fff; }
-.cta p { color: #fff; }
-.cta .btn-secondary {
-  background: var(--color-secondary);
-  color: #1C1C1C;
-  padding: 0.75rem 2rem;
-  border-radius: var(--radius-sm);
-  font-weight: 600;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: background 0.3s, box-shadow 0.3s;
-}
-.cta .btn-secondary:hover,
-.cta .btn-secondary:focus-visible {
-  background: var(--color-secondary-dark);
-  box-shadow: 0 4px 16px rgba(224, 185, 115, 0.15);
-}
-
-/* ===== Ajustes de enlaces en secciones ===== */
-.section a {
-  color: var(--color-primary);
-  text-decoration: none;
-  position: relative;
-  transition: color 0.3s;
-}
-.section a::after {
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: var(--color-secondary);
-  transition: width 0.3s;
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-}
-.section a:hover::after {
-  width: 100%;
-}
-.section a:hover {
-  color: var(--color-secondary);
-}
-
-/* ===== Responsive ===== */
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-text h1 { font-size: 2.2rem; }
-  .hero-text p { font-size: 1rem; }
-  .cards { gap: 1rem; }
-  .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+  .hero:not(.hero-simple) .hero-text h1 { font-size: 2.2rem; }
+  .hero:not(.hero-simple) .hero-text p  { font-size: 1rem; }
 }

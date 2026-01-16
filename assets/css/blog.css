@@ -1,0 +1,67 @@
+/* =========================
+   BLOG: Layout 2 columnas
+========================= */
+
+.blog-layout {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* Contenido principal */
+.blog-content {
+  flex: 1;     /* ocupa todo el espacio libre */
+  min-width: 0;
+}
+
+/* Sidebar (aparece a la derecha cuando está activo) */
+.blog-sidebar {
+  width: 300px;
+}
+
+/* Si el sidebar está vacío (include sin contenido), ocultarlo por completo */
+.blog-sidebar:empty {
+  display: none;
+}
+
+/* Responsive: en pantallas pequeñas, una sola columna */
+@media (max-width: 940px) {
+  .blog-layout {
+    flex-direction: column;
+  }
+  .blog-sidebar {
+    width: 100%;
+  }
+}
+
+/* =========================
+   BLOG: Widgets del sidebar
+========================= */
+.widget {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.04);
+  margin-bottom: 1.25rem;
+}
+
+.widget h3 {
+  font: 600 1.1rem var(--font-body);
+  color: var(--color-primary);
+  margin: 0 0 0.75rem;
+}
+
+.widget p { margin: 0 0 0.75rem; color: var(--color-text); }
+
+.widget-list { list-style: none; padding: 0; margin: 0; }
+.widget-list li + li { margin-top: 0.5rem; }
+.widget-list a { color: var(--color-primary); }
+.widget-list a:hover { color: var(--color-secondary); }
+
+/* Placeholder sutil para hoy */
+.widget--placeholder {
+  opacity: .85;
+  font-size: .95rem;
+  color: var(--color-muted);
+}

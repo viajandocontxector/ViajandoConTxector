@@ -1,4 +1,3 @@
-
 <header class="header header--static">
   <div class="container header-inner">
 
@@ -9,7 +8,7 @@
     </a>
 
     <nav class="nav-desktop" aria-label="Navegación principal">
-      <a href="/">Inicio</a>
+      <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Inicio</a>
       <a href="/servicio/" {% if page.url == "/servicio/" %}aria-current="page"{% endif %}>Servicio</a>
       <a href="/contacto/" {% if page.url == "/contacto/" %}aria-current="page"{% endif %}>Contacto</a>
     </nav>

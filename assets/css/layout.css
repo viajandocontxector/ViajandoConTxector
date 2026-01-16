@@ -1,8 +1,6 @@
-
 /* =========================
  Layout global: header, menú, footer
 ========================= */
-
 /* Header base */
 .header {
   position: fixed;
@@ -11,22 +9,18 @@
   z-index: 1000;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
 /* Estado transparente (home antes del scroll) */
 .header-transparent { background: transparent; }
-
 /* Estado con scroll (home tras el scroll) */
 .header.scrolled {
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
-
-/* === NUEVO: estado estático para páginas secundarias (Servicio/Contacto) === */
+/* === Estado estático para páginas secundarias (Servicio/Contacto) === */
 .header--static {
   background: #fff !important;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
-
 /* Contenedor interno del header */
 .header-inner {
   display: flex;
@@ -34,11 +28,9 @@
   justify-content: space-between;
   height: 80px;
 }
-
 /* Logo (solo imagen) */
 .logo { display: flex; align-items: center; }
 .logo-img { width: 180px; height: auto; transition: filter 0.3s; }
-
 /* Navegación desktop */
 .nav-desktop {
   display: flex;
@@ -50,16 +42,13 @@
   position: relative;
   transition: color 0.3s;
 }
-
 /* Home antes del scroll → enlaces blancos */
 .header:not(.scrolled):not(.header--static) .nav-desktop a { color: #fff; }
-
 /* Con scroll o estático → enlaces corporativos */
 .header.scrolled .nav-desktop a,
 .header.header--static .nav-desktop a {
   color: var(--color-primary);
 }
-
 /* Subrayado animado en hover (desktop y móvil) */
 .nav-desktop a::after {
   content: '';
@@ -153,9 +142,6 @@
 }
 
 /* Footer */
-
-
-/* Footer base que ya tienes */
 .footer {
   padding: 2rem 0;
   text-align: center;
@@ -165,7 +151,6 @@
   border-top: 1px solid var(--color-border);
   box-shadow: 0 -4px 12px rgba(0,0,0,0.05);
 }
-
 /* Enlaces legales del footer */
 .footer a {
   color: var(--color-primary);
@@ -177,7 +162,6 @@
 .footer a:focus-visible {
   color: var(--color-secondary);
 }
-
 /* Bloque redes sociales */
 .footer-social {
   margin-top: 0.75rem;
@@ -185,16 +169,15 @@
   justify-content: center;
   gap: 1rem;
 }
-
 /* Botones/iconos de redes */
 .footer-social .social-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;   /* tamaño del botón */
+  width: 40px; /* tamaño del botón */
   height: 40px;
   border-radius: 50%;
-  color: var(--color-primary);      /* controla el color del icono via currentColor */
+  color: var(--color-primary); /* icono via currentColor */
   background: #fff;
   box-shadow: 0 10px 25px rgba(0,0,0,0.04);
   transition: transform 0.15s ease, color 0.2s ease, box-shadow 0.2s ease;
@@ -205,62 +188,17 @@
   transform: translateY(-2px);
   box-shadow: 0 12px 32px rgba(31,58,77,0.12);
 }
-
 /* SVG iconos */
 .footer-social .icon {
   width: 22px;
   height: 22px;
   fill: currentColor; /* usa el color del enlace (primary/secondary) */
 }
-
-/* Accesibilidad (si quieres resaltar el foco teclado) */
+/* Accesibilidad (foco teclado) */
 .footer-social .social-link:focus-visible {
   outline: 3px solid #7aa0b9;
   outline-offset: 2px;
 }
-
-/* Responsive */
-@media (max-width: 480px) {
-  .footer-social .social-link {
-    width: 36px;
-    height: 36px;
-  }
-  .footer-social .icon {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-
-
-/* ===== Hero simple (sin imagen) para páginas estáticas ===== */
-.hero.hero-simple {
-  background: #fff;
-  /* Evita solape con header fijo (≈ 80px). Pon 100px para respirar. */
-  padding-top: 100px;
-  padding-bottom: 3rem;
-  text-align: center;
-}
-.hero.hero-simple .hero-grid {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-.hero.hero-simple .hero-text h1 {
-  color: var(--color-primary);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-.hero.hero-simple .hero-text p {
-  color: var(--color-text);
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero.hero-simple .hero-text li {
-  list-style-type: none;
-}
-
 
 /* Responsive */
 @media (max-width: 768px) {

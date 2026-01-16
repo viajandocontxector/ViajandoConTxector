@@ -1,0 +1,190 @@
+/* =========================
+   Componentes reutilizables
+   (hero, sections, cards, cta, lists, article)
+========================= */
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 4rem 0;
+  text-align: center;
+}
+.section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: var(--color-primary);
+}
+.section-alt {
+  background: #fff; /* usado en servicio */
+}
+
+/* ===== HERO (base + variaciones) ===== */
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 2.5rem;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.hero-text p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  max-width: 48ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Hero SIMPLE (páginas internas) */
+.hero.hero-simple {
+  background: #fff;
+  padding-top: calc(var(--header-height) + 20px);
+  padding-bottom: 3rem;
+  text-align: center;
+}
+.hero.hero-simple .hero-grid { max-width: 800px; }
+.hero.hero-simple .hero-text h1 { color: var(--color-primary); }
+.hero.hero-simple .hero-text p  { color: var(--color-text); }
+
+/* Nota: el hero con imagen del home (.hero, .hero-bg, ::after)
+   vive en index.css, aquí solo la base común. */
+
+/* ===== CARDS (grid + card base) ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+/* Variación más densa (si la usas en Servicio) */
+.cards-servicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+}
+
+/* Hover/estados de card (la base está en global.css) */
+.card:hover,
+.card:focus-within {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 32px rgba(31, 58, 77, 0.12);
+  border-color: var(--color-secondary);
+}
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--color-primary);
+}
+.card p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: var(--color-primary);
+  color: #fff;
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-top: 3rem;
+}
+.cta h2 { margin-bottom: 1.5rem; color: #fff; font-size: 2rem; }
+.cta p  { color: #fff; font-size: 1.2rem; }
+.cta .btn-secondary {
+  background: var(--color-secondary);
+  color: #1C1C1C;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.cta .btn-secondary:hover,
+.cta .btn-secondary:focus-visible {
+  background: var(--color-secondary-dark);
+  box-shadow: 0 4px 16px rgba(224, 185, 115, 0.15);
+}
+
+/* ===== LISTAS ESPECÍFICAS ===== */
+.checklist {
+  margin: 1.5rem auto 0;
+  padding: 0;
+  list-style: none;
+  max-width: 680px;
+  text-align: left;
+}
+.checklist li {
+  position: relative;
+  padding-left: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.checklist li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* ===== ARTÍCULO / CONTENIDO LARGO (blog y legales) ===== */
+.article {
+  max-width: 68ch;
+  margin: 0 auto;
+  text-align: left;
+}
+.article h1, .article h2, .article h3 { margin-top: 1.5rem; }
+.article p { margin: 0 0 1rem; }
+.article ul, .article ol { padding-left: 1.25rem; margin: 0 0 1rem; }
+.article li { list-style: disc; }
+
+.article.article-center {
+    text-align: center;
+}
+
+.article.article-center li {
+    list-style-type: none;
+}
+
+/* ===== LINKS en secciones (subrayado animado) ===== */
+.section a {
+  color: var(--color-primary);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+}
+.section a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.section a:hover::after { width: 100%; }
+.section a:hover { color: var(--color-secondary); }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-text h1 { font-size: 2.2rem; }
+  .hero-text p  { font-size: 1rem; }
+  .cards { gap: 1rem; }
+  .btn-primary, .btn-secondary { width: 100%; text-align: center; }
+}
