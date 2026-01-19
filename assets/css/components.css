@@ -212,6 +212,10 @@
   margin: 0 auto 2rem;
 }
 
+.swiper-slide {
+  display: flex;
+}
+
 .swiper-slide img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -232,6 +236,10 @@
 .swiper-pagination-bullet-active {
   background: var(--color-secondary);
   opacity: 1;
+}
+
+.swiper-lazy-preloader {
+  --swiper-preloader-color: var(--color-secondary);
 }
 
 /* ===== Responsive ===== */

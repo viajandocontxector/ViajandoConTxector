@@ -338,39 +338,48 @@ document.addEventListener('DOMContentLoaded', () => {
     updateParallax();
     window.addEventListener('scroll', onScrollParallax, { passive: true });
   }
-
   
 // === Carrusel Swiper (inicialización simple) ===
-try {
-    // Verifica que Swiper está cargado y que existe el contenedor
-    if (typeof Swiper !== 'undefined' && document.querySelector('.swiper')) {
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  try {
+    const swiperEl = document.querySelector('.swiper');
 
-      new Swiper('.swiper', {
-        loop: true,
+    if (typeof Swiper !== 'undefined' && swiperEl) {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const slidesCount = swiperEl.querySelectorAll('.swiper-slide').length;
+
+      new Swiper(swiperEl, {
+        loop: slidesCount > 1,
         spaceBetween: 20,
         slidesPerView: 1,
-        // Si respetas reduce motion, desactiva autoplay/transiciones fuertes
         speed: prefersReduced ? 0 : 400,
 
-        // Controles
+        lazy: {
+          loadPrevNext: true
+        },
+
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev'
         },
+
         pagination: {
           el: '.swiper-pagination',
           clickable: true
         },
 
-        // Accesibilidad (Swiper ya incluye A11y básica; puedes ajustar)
+        breakpoints: {
+          768: {
+            slidesPerView: 2
+          },
+          1024: {
+            slidesPerView: 3
+          }
+        },
+
         a11y: {
           enabled: true
         }
       });
-    } else {
-      // Opcional: log para depurar
-      console.warn('Swiper no está disponible o no hay .swiper en esta página');
     }
   } catch (err) {
     console.error('Error inicializando Swiper:', err);
