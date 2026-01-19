@@ -186,14 +186,15 @@
 .section-image {
   padding: 0;
   margin: 0 auto 2rem;
-  max-width: min(100%, 680px);
+  max-width: 90%;           /* nunca más del 90% del viewport */
+  width: 600px;             /* tamaño base “ideal” */
 }
 
 .section-image img {
-  width: 100%;
+  width: 100%;              /* siempre llena el contenedor */
+  height: auto;             /* mantiene proporción real */
   display: block;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: cover;        /* si quieres recortar, o remove si quieres mostrar completo */
   border-radius: var(--radius-md);
 }
 
@@ -257,14 +258,16 @@
   .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .section-image {
-    max-width: 720px;
+    width: 80%;
+    max-width: 500px; 
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
   .section-image {
-    max-width: 840px;
+    width: 90%;
+    max-width: 350px;
   }
 }
