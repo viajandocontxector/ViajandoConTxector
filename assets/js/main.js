@@ -338,4 +338,42 @@ document.addEventListener('DOMContentLoaded', () => {
     updateParallax();
     window.addEventListener('scroll', onScrollParallax, { passive: true });
   }
+
+  
+// === Carrusel Swiper (inicialización simple) ===
+try {
+    // Verifica que Swiper está cargado y que existe el contenedor
+    if (typeof Swiper !== 'undefined' && document.querySelector('.swiper')) {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      new Swiper('.swiper', {
+        loop: true,
+        spaceBetween: 20,
+        slidesPerView: 1,
+        // Si respetas reduce motion, desactiva autoplay/transiciones fuertes
+        speed: prefersReduced ? 0 : 400,
+
+        // Controles
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+
+        // Accesibilidad (Swiper ya incluye A11y básica; puedes ajustar)
+        a11y: {
+          enabled: true
+        }
+      });
+    } else {
+      // Opcional: log para depurar
+      console.warn('Swiper no está disponible o no hay .swiper en esta página');
+    }
+  } catch (err) {
+    console.error('Error inicializando Swiper:', err);
+  }
+
 });
