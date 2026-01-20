@@ -98,7 +98,6 @@
   color: #fff;
   text-align: center;
   padding: 4rem 1rem;
-  margin-top: 3rem;
 }
 .cta h2 { margin-bottom: 1.5rem; color: #fff; font-size: 2rem; }
 .cta p  { color: #fff; font-size: 1.2rem; }
@@ -186,36 +185,27 @@
 .section-image {
   padding: 0;
   margin: 0 auto 2rem;
-  max-width: 90%;           /* nunca más del 90% del viewport */
-  width: 600px;             /* tamaño base “ideal” */
+  max-width: 90%; 
+  width: 600px; 
 }
 
 .section-image img {
-  width: 100%;              /* siempre llena el contenedor */
-  height: auto;             /* mantiene proporción real */
+  width: 100%; 
+  height: auto;
   display: block;
-  object-fit: cover;        /* si quieres recortar, o remove si quieres mostrar completo */
-  border-radius: var(--radius-md);
-}
-
-/* ===== Carrusel ===== */
-.gallery img,
-.carousel-slide img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius-md);
-  display: block;
 }
 
 /* ===== Swiper ===== */
 .swiper {
   width: 100%;
   margin: 0 auto 2rem;
+  overflow: hidden;
 }
 
 .swiper-slide {
-  display: flex;
+  display: block;
 }
 
 .swiper-slide img {
@@ -250,6 +240,33 @@
   --swiper-pagination-color: var(--color-secondary);
 }
 
+.swiper-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+/* ===== MAPA ===== */
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #eee;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   .hero-text h1 { font-size: 2.2rem; }
@@ -263,11 +280,21 @@
     width: 80%;
     max-width: 500px; 
   }
+
+  .swiper-container {
+    max-width: 600px;
+    padding: 0 1rem;
+  }
 }
 
 @media (max-width: 480px) {
   .section-image {
     width: 90%;
     max-width: 350px;
+  }
+
+  .swiper-container {
+    max-width: 360px;
+    padding: 0 .75rem;
   }
 }

@@ -10,6 +10,7 @@
 
 /* Contenido principal */
 .blog-content {
+  width: 100%;
   flex: 1;     /* ocupa todo el espacio libre */
   min-width: 0;
 }
