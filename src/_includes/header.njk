@@ -9,6 +9,34 @@
 
     <nav class="nav-desktop" aria-label="Navegación principal">
       <a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}>Inicio</a>
+      
+      <div class="nav-item-wrapper">
+      <button class="nav-item nav-item--megamenu" aria-expanded="false" aria-controls="megamenu-viajes">Viajes</button>
+
+      <div id="viajes-menu" class="viajes-menu" aria-hidden="true">
+        <div class="viajes-panel viajes-panel--level-1" data-level="1">
+          <ul class="viajes-list">
+            <li><a class="viajes-link" href="/rutas/">Rutas</a></li>
+            <li class="has-children" data-target="europa">
+              <span class="viajes-link">Europa</span>
+            </li>
+          </ul>
+        </div>
+        <div class="viajes-panel" data-panel="europa" data-level="2">
+          <ul class="viajes-list viajes-list--columns">
+            <li class="has-children" data-target="portugal">
+              <span class="viajes-link">Portugal</span>
+            </li>
+          </ul>
+        </div>
+        <div class="viajes-panel" data-panel="portugal" data-level="3">
+          <ul class="viajes-list viajes-list--columns">
+            <li><a class="viajes-link" href="/europa/portugal/lisboa/">Lisboa</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+
       <a href="/servicio/" {% if page.url == "/servicio/" %}aria-current="page"{% endif %}>Servicio</a>
       <a href="/contacto/" {% if page.url == "/contacto/" %}aria-current="page"{% endif %}>Contacto</a>
     </nav>
