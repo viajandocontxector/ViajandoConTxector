@@ -2,15 +2,21 @@ const viajesBtn = document.querySelector('.nav-item--megamenu');
 const viajesMenu = document.getElementById('viajes-menu');
 const panels = [...document.querySelectorAll('.viajes-panel')];
 
-let closeTimeout;
+let closeTimeout = null;
 
-/* ---------- helpers ---------- */
+/* ===============================
+   HELPERS
+================================ */
 
 function openMenu() {
   viajesMenu.classList.add('is-open');
   viajesMenu.setAttribute('aria-hidden', 'false');
   viajesBtn.setAttribute('aria-expanded', 'true');
-  activateLevel(1);
+
+  // Solo panel nivel 1 activo
+  panels.forEach(p => {
+    p.classList.toggle('is-active', p.dataset.level === '1');
+  });
 }
 
 function closeMenu() {
@@ -20,18 +26,65 @@ function closeMenu() {
   panels.forEach(p => p.classList.remove('is-active'));
 }
 
-function activateLevel(level) {
-  panels.forEach(p => {
-    const panelLevel = Number(p.dataset.level);
-    if (panelLevel <= level) {
-      p.classList.add('is-active');
-    } else {
-      p.classList.remove('is-active');
+/**
+ * Activa una rama concreta:
+ * - mantiene los padres
+ * - cierra hermanos
+ */
+function activateBranch(targetPanel) {
+  const targetLevel = Number(targetPanel.dataset.level);
+  const targetParent = targetPanel.dataset.parent;
+
+  panels.forEach(panel => {
+    const level = Number(panel.dataset.level);
+
+    // Nivel 1 siempre visible
+    if (level === 1) {
+      panel.classList.add('is-active');
+      return;
     }
+
+    // Panel objetivo
+    if (panel === targetPanel) {
+      panel.classList.add('is-active');
+      return;
+    }
+
+    // Padre directo del panel objetivo
+    if (
+      level === targetLevel - 1 &&
+      panel.dataset.panel === targetParent
+    ) {
+      panel.classList.add('is-active');
+      return;
+    }
+
+    // Todo lo demás se cierra
+    panel.classList.remove('is-active');
   });
 }
 
-/* ---------- botón viajes ---------- */
+/**
+ * Alinea el panel hijo exactamente
+ * desde el LI que lo invoca
+ */
+function alignPanelToItem(item, panel) {
+  const itemRect = item.getBoundingClientRect();
+  const menuRect = viajesMenu.getBoundingClientRect();
+
+  const left =
+    itemRect.left - menuRect.left - panel.offsetWidth;
+
+  const top =
+    itemRect.top - menuRect.top;
+
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+}
+
+/* ===============================
+   BOTÓN VIAJES
+================================ */
 
 viajesBtn.addEventListener('mouseenter', () => {
   clearTimeout(closeTimeout);
@@ -42,7 +95,9 @@ viajesBtn.addEventListener('mouseleave', () => {
   closeTimeout = setTimeout(closeMenu, 150);
 });
 
-/* ---------- menú completo ---------- */
+/* ===============================
+   MENÚ COMPLETO
+================================ */
 
 viajesMenu.addEventListener('mouseenter', () => {
   clearTimeout(closeTimeout);
@@ -52,9 +107,9 @@ viajesMenu.addEventListener('mouseleave', () => {
   closeTimeout = setTimeout(closeMenu, 150);
 });
 
-let activeTarget = null;
-
-/* ---------- navegación entre niveles ---------- */
+/* ===============================
+   ITEMS CON HIJOS
+================================ */
 
 document.querySelectorAll('.has-children').forEach(item => {
   const target = item.dataset.target;
@@ -64,69 +119,36 @@ document.querySelectorAll('.has-children').forEach(item => {
 
   if (!targetPanel) return;
 
-  const level = Number(targetPanel.dataset.level);
-
   item.addEventListener('mouseenter', () => {
-    activeTarget = target;
-    activateLevel(level);
-  });
-
-  item.addEventListener('mouseleave', () => {
-    // Pequeño delay para permitir mover el ratón al panel hijo
-    setTimeout(() => {
-      // Si no estamos ni en el item ni en su panel, cerramos
-      if (
-        activeTarget === target &&
-        !item.matches(':hover') &&
-        !targetPanel.matches(':hover')
-      ) {
-        activeTarget = null;
-        activateLevel(level - 1);
-      }
-    }, 80);
-  });
-
-  targetPanel.addEventListener('mouseenter', () => {
-    activeTarget = target;
-  });
-
-  targetPanel.addEventListener('mouseleave', () => {
-    setTimeout(() => {
-      if (
-        activeTarget === target &&
-        !item.matches(':hover') &&
-        !targetPanel.matches(':hover')
-      ) {
-        activeTarget = null;
-        activateLevel(level - 1);
-      }
-    }, 80);
+    const parentPanel = item.closest('.viajes-panel');
+    if (!parentPanel || !parentPanel.classList.contains('is-active')) return;
+    
+    activateBranch(targetPanel);
+    alignPanelToItem(item, targetPanel);
   });
 });
 
-/* ---------- cerrar hijos al moverse por el panel padre ---------- */
+/* ===============================
+   ITEMS SIN HIJOS (ej: Rutas)
+   → cierran subpaneles
+================================ */
 
-document.querySelectorAll('.viajes-panel').forEach(panel => {
-  panel.addEventListener('mousemove', () => {
-    document.querySelectorAll('.has-children').forEach(item => {
-      const target = item.dataset.target;
-      const childPanel = document.querySelector(
-        `.viajes-panel[data-panel="${target}"]`
-      );
+document.querySelectorAll(
+  '.viajes-panel li:not(.has-children)'
+).forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    const parentPanel = item.closest('.viajes-panel');
+    if (!parentPanel) return;
 
-      if (!childPanel) return;
+    const level = Number(parentPanel.dataset.level);
 
-      const level = Number(childPanel.dataset.level);
+    // ⚠️ Si estamos en nivel 3 (ciudades), NO hacer nada
+    if (level >= 3) return;
 
-      // Si NO estamos ni en el item ni en su panel → cerrar hijos
-      if (
-        !item.matches(':hover') &&
-        !childPanel.matches(':hover') &&
-        activeTarget === target
-      ) {
-        activeTarget = null;
-        activateLevel(level - 1);
-      }
+    // Solo cerrar paneles más profundos
+    panels.forEach(panel => {
+      const panelLevel = Number(panel.dataset.level);
+      panel.classList.toggle('is-active', panelLevel <= level);
     });
   });
-});
+}); 

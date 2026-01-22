@@ -318,6 +318,19 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', closeMenu);
   }
 
+  document.querySelectorAll('.mobile-toggle').forEach(btn => {
+    const submenu = btn.nextElementSibling;
+
+    if (!submenu || !submenu.classList.contains('mobile-submenu')) return;
+
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      submenu.hidden = isOpen;
+    });
+  });
+  
   // -------------------------
   // Parallax hero (solo en Home; respeta reduce motion)
   // -------------------------

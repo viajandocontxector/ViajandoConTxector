@@ -38,11 +38,13 @@
   gap: 1.5rem;
   font-weight: 500;
 }
+
 .nav-desktop a,
 .nav-desktop .nav-item {
   font-weight: inherit;
   position: relative;
   transition: color 0.3s;
+  cursor: pointer;
 }
 
 .nav-desktop .nav-item {
@@ -52,7 +54,6 @@
   font: inherit;
   appearance: none;
   -webkit-appearance: none;
-  cursor: pointer;
 }
 
 .nav-item-wrapper {
@@ -131,7 +132,6 @@
 .mobile-menu nav {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
 }
 /* Enlaces del móvil: corporativos */
 .mobile-menu a {
@@ -141,6 +141,7 @@
   position: relative;
   transition: color 0.3s;
 }
+
 .mobile-menu a::after {
   content: '';
   display: block;
@@ -155,6 +156,35 @@
 .mobile-menu a:hover::after { width: 100%; }
 .mobile-menu a:hover { color: var(--color-secondary); }
 
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-link {
+  background: none;
+  border: 0;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 0.4rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.mobile-submenu {
+  list-style: none;
+  margin: 0 0 0 1rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-submenu[hidden] {
+  display: none;
+}
+
 /* Overlay */
 .menu-overlay {
   position: fixed;
@@ -168,6 +198,26 @@
 .menu-overlay.open {
   opacity: 1;
   pointer-events: all;
+}
+
+  /* Botones con submenú */
+.mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Flecha */
+.mobile-toggle::after {
+  content: '▾';
+  font-size: 0.85rem;
+  opacity: 0.6;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Abierto */
+.mobile-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  opacity: 1;
 }
 
 /* Footer */
@@ -243,17 +293,31 @@
   width: max-content;
 }
 
+.viajes-menu li,
+.viajes-menu a,
+.viajes-menu button {
+  cursor: pointer;
+}
+
+.viajes-menu a::after {
+  content: none !important;
+}
+
 .viajes-menu.is-open {
   pointer-events: auto;
 }
 
 /* Panel base */
 .viajes-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
   background: #fff;
   box-shadow: 0 20px 40px rgba(0,0,0,.08);
-  padding: 1.5rem;
   display: none;
   width: max-content;
+  border-radius: 8px;
+  border: 1px solid var(--color-secondary);
 }
 
 /* Panel visible */
@@ -261,54 +325,103 @@
   display: block;
 }
 
-.viajes-panel[data-level="2"] {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  margin-right: 16px;
+.viajes-panel[data-level="1"] {
+  position: relative;
+  left: 0;
+  transform: none;
 }
 
-.viajes-panel[data-level="3"] {
-  position: absolute;
-  top: 0;
-  right: calc(200% + 16px);
+.viajes-panel[data-level="1"] .viajes-link {
+  font-weight: 600;
+}
+
+.viajes-panel[data-level="2"] .viajes-link {
+  font-weight: 500;
+}
+
+.viajes-panel[data-level="3"] .viajes-link {
+  padding-left: 0;
+  font-weight: 400;
 }
 
 /* Listas */
 .viajes-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem 1.5rem;
 }
 
 .viajes-link {
-  display: block;
-  padding: 0.35rem 0;
-  color: var(--color-primary);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0 0.35rem 1.2rem;
+  background: none;
+  border: 0;
+  font: inherit;
   cursor: pointer;
+  color: var(--color-primary);
   white-space: nowrap;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: 500;
 }
 
-.viajes-link:hover {
-  color: var(--color-secondary);
+/* Texto real (subrayable) */
+.viajes-text {
+  position: relative;
+}
+
+/* Subrayado SOLO del texto */
+.viajes-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--color-secondary);
+  transition: width 0.3s;
+}
+
+/* Hover */
+.viajes-link:hover .viajes-text::after {
+  width: 100%;
 }
 
 /* Flecha visual para elementos con hijos */
-.has-children > .viajes-link::after {
+
+.has-children > .viajes-link::before {
   content: '‹';
-  float: left;
-  margin-left: -1rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 0.5;
+  font-size: 0.9em;
 }
 
 /* Columnas automáticas (países y ciudades) */
 .viajes-list--columns {
   display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: repeat(8, auto);
-  gap: 0.35rem 2rem;
+  grid-template-columns: 1fr;
+  row-gap: 0.5rem;
+  column-gap: 3rem;
 }
 
+.viajes-list--columns:has(li:nth-child(5)) {
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: none;
+  grid-auto-flow: column;
+}
+
+.viajes-list--columns {
+  direction: rtl;
+}
+
+.viajes-list--columns > * {
+  direction: ltr;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
