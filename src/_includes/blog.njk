@@ -13,7 +13,7 @@ layout: layout.njk
     </div>
 </section>
 
-<section class="section" aria-labelledby="contenido-title">
+<section class="sectionBlog" aria-labelledby="contenido-title">
     <div class="container">
     <div class="blog-layout">
         <div class="blog-content">
@@ -35,8 +35,8 @@ layout: layout.njk
 
 <section class="cta" aria-labelledby="blog-cta-title">
     <div class="container">
-        <h2 id="blog-cta-title">¿Quieres una ruta como esta, adaptada a ti?</h2>
-        <p>Puedo diseñar tu viaje a medida, optimizando tiempos, trayectos y ajustándolo a tu forma de viajar.</p>
-        <a class="btn btn-secondary" href="/contacto/">Diseñar mi viaje</a>
+        <h2 id="blog-cta-title">{{ titlecta }}</h2>
+        <p>{{ descriptioncta }}</p>
+        <a class="btn btn-secondary" href="/contacto/">{{ buttoncta }}</a>
     </div>
 </section>

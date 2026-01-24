@@ -4,6 +4,11 @@
 ========================= */
 
 /* ===== SECTIONS ===== */
+.sectionBlog {
+  padding: 0rem 0;
+  text-align: center;
+ }
+
 .section {
   padding: 4rem 0;
   text-align: center;
@@ -48,7 +53,6 @@
 .hero.hero-simple {
   background: #fff;
   padding-top: calc(var(--header-height) + 20px);
-  padding-bottom: 3rem;
   text-align: center;
 }
 .hero.hero-simple .hero-grid { max-width: 800px; }
@@ -144,7 +148,6 @@
 .article {
   max-width: 68ch;
   margin: 0 auto;
-  text-align: left;
 }
 .article h1, .article h2, .article h3 { margin-top: 1.5rem; }
 .article p { margin: 0 0 1rem; }
@@ -161,7 +164,7 @@
 
 /* ===== LINKS en secciones (subrayado animado) ===== */
 .section a {
-  color: var(--color-primary);
+  color: var(--color-secondary);
   text-decoration: none;
   position: relative;
   transition: color 0.3s;
@@ -178,22 +181,25 @@
   bottom: -4px;
 }
 .section a:hover::after { width: 100%; }
-.section a:hover { color: var(--color-secondary); }
+.section a:hover { color: var(--color-primary); }
 
 /* ===== Imágenes ===== */
 
 .section-image {
   padding: 0;
-  margin: 0 auto 2rem;
+  margin: 4rem auto;
   max-width: 90%; 
   width: 600px; 
+  display: flex;
+  justify-content: center;
 }
 
 .section-image img {
   width: 100%; 
+  max-height: 400px;
+  width: auto;
   height: auto;
   display: block;
-  object-fit: cover;
   border-radius: var(--radius-md);
 }
 

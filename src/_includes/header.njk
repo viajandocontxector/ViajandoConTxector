@@ -16,7 +16,7 @@
         <div id="viajes-menu" class="viajes-menu" aria-hidden="true">
           <div class="viajes-panel viajes-panel--level-1" data-level="1">
             <ul class="viajes-list">
-              <li><a class="viajes-link" href="/rutas/"><span class="viajes-text">Rutas</span></a></li>
+              <li><a class="viajes-link" href="/listado-rutas/"><span class="viajes-text">Rutas</span></a></li>
               <li class="has-children" data-target="europa"><button class="viajes-link" type="button"><span class="viajes-text">Europa</span></button></li>
               <li class="has-children" data-target="asia"><button class="viajes-link" type="button"><span class="viajes-text">Asia</span></button></li>
             </ul>
@@ -42,24 +42,24 @@
           </div>
           <div class="viajes-panel" data-panel="lituania" data-level="3" data-parent="europa">
             <ul class="viajes-list viajes-list--columns">
-              <li><a class="viajes-link" href="/europa/lituania/vilna/"><span class="viajes-text">Vilna</span></a></li>
-              <li><a class="viajes-link" href="/europa/lituania/kaunas/"><span class="viajes-text">Kaunas</span></a></li>
-              <li><a class="viajes-link" href="/europa/lituania/klaipeda/"><span class="viajes-text">Klaipeda</span></a></li>
+              <li><a class="viajes-link" href="/europa/lituania/vilna/listado-vilna/"><span class="viajes-text">Vilna</span></a></li>
+              <li><a class="viajes-link" href="/europa/lituania/vilna/listado-kaunas/"><span class="viajes-text">Kaunas</span></a></li>
+              <li><a class="viajes-link" href="/europa/lituania/vilna/listado-klaipeda/"><span class="viajes-text">Klaipeda</span></a></li>
             </ul>
           </div>
           <div class="viajes-panel" data-panel="letonia" data-level="3" data-parent="europa">
             <ul class="viajes-list viajes-list--columns">
-              <li><a class="viajes-link" href="/europa/letonia/riga/"><span class="viajes-text">Riga</span></a></li>
+              <li><a class="viajes-link" href="/europa/letonia/riga/listado-riga/"><span class="viajes-text">Riga</span></a></li>
             </ul>
           </div>
           <div class="viajes-panel" data-panel="estonia" data-level="3" data-parent="europa">
             <ul class="viajes-list viajes-list--columns">
-              <li><a class="viajes-link" href="/europa/estonia/tallin/"><span class="viajes-text">Tallin</span></a></li>
+              <li><a class="viajes-link" href="/europa/estonia/tallin/listado-tallin/"><span class="viajes-text">Tallin</span></a></li>
             </ul>
           </div>
           <div class="viajes-panel" data-panel="finlandia" data-level="3" data-parent="europa">
             <ul class="viajes-list viajes-list--columns">
-              <li><a class="viajes-link" href="/europa/finlandia/helsinki/"><span class="viajes-text">Helsinki</span></a></li>
+              <li><a class="viajes-link" href="/europa/finlandia/helsinki/listado-helsinki/"><span class="viajes-text">Helsinki</span></a></li>
             </ul>
           </div>
           <div class="viajes-panel" data-panel="portugal" data-level="3" data-parent="europa">
@@ -133,51 +133,24 @@
   <nav class="mobile-nav" aria-label="Navegación móvil">
 
     <a href="/" class="mobile-link">Inicio</a>
-    <a href="/servicio/" class="mobile-link">Servicio</a>
-
-    <button class="mobile-link mobile-toggle"
-            aria-expanded="false"
-            aria-controls="mobile-viajes">
-      Viajes
-    </button>
-
+    
+    <button class="mobile-link mobile-toggle" aria-expanded="false" aria-controls="mobile-viajes">Viajes</button>
     <ul id="mobile-viajes" class="mobile-submenu" hidden>
+      <li><a href="/listado-rutas/">Rutas</a></li>
       <li>
-        <a href="/rutas/">Rutas</a>
-      </li>
-
-      <li>
-        <button class="mobile-link mobile-toggle"
-                aria-expanded="false">
-          Europa
-        </button>
-
+        <button class="mobile-link mobile-toggle" aria-expanded="false">Europa</button>
         <ul class="mobile-submenu" hidden>
           <li>
-            <button class="mobile-link mobile-toggle"
-                    aria-expanded="false">
-              Portugal
-            </button>
-
+            <button class="mobile-link mobile-toggle" aria-expanded="false">Lituania</button>
             <ul class="mobile-submenu" hidden>
-              <li><a href="/europa/portugal/lisboa/">Lisboa</a></li>
+              <li><a href="/europa/lituania/vilna/listado-vilna/">Vilna</a></li>
             </ul>
           </li>
         </ul>
       </li>
-
-      <li>
-        <button class="mobile-link mobile-toggle"
-                aria-expanded="false">
-          Asia
-        </button>
-
-        <ul class="mobile-submenu" hidden>
-          <li><a href="/asia/japon/tokio/">Tokio</a></li>
-        </ul>
-      </li>
     </ul>
 
+    <a href="/servicio/" class="mobile-link">Servicio</a>
     <a href="/contacto/" class="mobile-link">Contacto</a>
   </nav>
 </aside>
