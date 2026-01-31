@@ -11,9 +11,6 @@ export default async function handler(req, res) {
     const {
       nombre,
       email,
-      destino,
-      personas,
-      fechas,
       mensaje,
       website,
       form_start
@@ -30,12 +27,12 @@ export default async function handler(req, res) {
     }
 
     // Validación básica
-    if (!nombre || !email || !destino || !personas || !fechas || !mensaje) {
+    if (!nombre || !email || !mensaje) {
       return res.status(400).json({ ok: false, error: "Faltan campos" });
     }
 
     await resend.emails.send({
-      from: "Txector Routes <no-reply@txectorroutes.com>",
+      from: "Viajando con Txector <no-reply@txectorroutes.com>",
       to: "txectorroutes@gmail.com",
       reply_to: email,
       subject: `Nuevo mensaje de ${nombre}`,
@@ -43,9 +40,6 @@ export default async function handler(req, res) {
         <h2>Nuevo mensaje desde el formulario</h2>
         <p><strong>Nombre:</strong> ${nombre}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Destino:</strong> ${destino}</p>
-        <p><strong>Personas:</strong> ${personas}</p>
-        <p><strong>Fechas:</strong> ${fechas}</p>
         <p><strong>Mensaje:</strong></p>
         <p>${mensaje.replace(/\n/g, "<br>")}</p>
       `,
