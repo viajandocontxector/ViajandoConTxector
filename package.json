@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/txectorroutes/TxectorRoutesWeb.git"
+    "url": "git+https://github.com/viajandocontxector/ViajandoConTxector.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/txectorroutes/TxectorRoutesWeb/issues"
+    "url": "https://github.com/viajandocontxector/ViajandoConTxector/issues"
   },
-  "homepage": "https://github.com/txectorroutes/TxectorRoutesWeb#readme",
+  "homepage": "https://github.com/viajandocontxector/ViajandoConTxector#readme",
   "dependencies": {
     "resend": "^6.7.0"
   },

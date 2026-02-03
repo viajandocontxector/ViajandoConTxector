@@ -2,38 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://txectorroutes.com/</loc>
+    <loc>https://viajandocontxector.com/</loc>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/servicio</loc>
+    <loc>https://viajandocontxector.com/servicio</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/contacto</loc>
+    <loc>https://viajandocontxector.com/contacto</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/gracias</loc>
-    <priority>0.5</priority>
+    <loc>https://viajandocontxector.com/gracias</loc>
+    <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/legal/aviso-legal</loc>
-    <priority>0.5</priority>
+    <loc>https://viajandocontxector.com/legal/aviso-legal</loc>
+    <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/legal/cookies</loc>
-    <priority>0.5</priority>
+    <loc>https://viajandocontxector.com/legal/cookies</loc>
+    <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://txectorroutes.com/legal/privacidad</loc>
-    <priority>0.5</priority>
+    <loc>https://viajandocontxector.com/legal/privacidad</loc>
+    <priority>0.3</priority>
   </url>
 
 </urlset>

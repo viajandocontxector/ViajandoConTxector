@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://txectorroutes.com/sitemap.xml
+Sitemap: https://viajandocontxector.com/sitemap.xml

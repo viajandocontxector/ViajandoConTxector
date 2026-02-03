@@ -32,8 +32,8 @@ export default async function handler(req, res) {
     }
 
     await resend.emails.send({
-      from: "Viajando con Txector <no-reply@txectorroutes.com>",
-      to: "txectorroutes@gmail.com",
+      from: "Viajando con Txector <no-reply@viajandocontxector.com>",
+      to: "viajandocontxector@gmail.com",
       reply_to: email,
       subject: `Nuevo mensaje de ${nombre}`,
       html: `
