@@ -7,13 +7,33 @@
   </url>
 
   <url>
-    <loc>https://viajandocontxector.com/servicio</loc>
+    <loc>https://viajandocontxector.com/rutas</loc>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://viajandocontxector.com/contacto</loc>
+    <loc>https://viajandocontxector.com/rutas/europa/paises-balticos-9-dias</loc>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna/que-ver-en-vilna</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/servicio</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/contacto</loc>
+    <priority>0.6</priority>
   </url>
 
   <url>
