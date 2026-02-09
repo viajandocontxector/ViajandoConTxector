@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Consentimiento de Cookies + GA4 + iframes diferidos
   // =========================
   const STORAGE_KEY = 'cookie_consent_v3'; // sube versión si quieres forzar de nuevo
-  const GA_MEASUREMENT_ID = 'G-EMKW5P5Z7N';
+  const GA_MEASUREMENT_ID = 'G-WENLWPMP23';
 
   const defaultCategories = { essential: true, analytics: false, functional: false, marketing: false };
 
