@@ -1,3 +1,14 @@
+// =========================
+// Consent Mode – estado por defecto
+// =========================
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+
+// Antes de que el usuario decida
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied'
+});
 
 // =========================
 // Main – Inicialización segura
@@ -82,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       Consent.set(consent);
       hideBanner();
       if (manageBtn) manageBtn.hidden = false;
+      window.gtag('consent', 'update', { analytics_storage: 'granted' });
       loadGA4();
       enableDeferredIframes();
     });
@@ -107,7 +119,13 @@ document.addEventListener('DOMContentLoaded', () => {
       Consent.set(consent);
       settings.style.display = 'none';
       if (manageBtn) manageBtn.hidden = false;
-      if (consent.analytics)  loadGA4(); else revokeAnalytics();
+      if (consent.analytics)  {
+        window.gtag('consent', 'update', { analytics_storage: 'granted' });
+        loadGA4();
+       } 
+      else {
+        revokeAnalytics();
+      };
       if (consent.functional) enableDeferredIframes();
     });
   }
@@ -119,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // GA4 condicional
   function loadGA4() {
     if (!GA_MEASUREMENT_ID || window.__gaLoaded) return;
-    window.__gaLoaded = true;
+    
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     window.gtag = gtag;
@@ -129,6 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const dnt = navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.msDoNotTrack === '1';
     if (dnt) { console.warn('Do Not Track activado. GA4 no se cargará.'); return; }
 
+    window.__gaLoaded = true;
+    
     const script = document.createElement('script');
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
