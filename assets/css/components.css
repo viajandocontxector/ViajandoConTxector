@@ -10,7 +10,7 @@
  }
 
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0 0 0;
   text-align: center;
 }
 .section h2 {
@@ -21,6 +21,15 @@
 }
 .section-alt {
   background: #fff; /* usado en servicio */
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+.section-grid {
+  background: #fff; /* usado en servicio */
+  padding-bottom: 2rem;
+}
+.section-end {
+  padding-bottom: 2rem;
 }
 
 /* ===== HERO (base + variaciones) ===== */
@@ -149,7 +158,6 @@
   max-width: 68ch;
   margin: 0 auto;
 }
-.article h1, .article h2, .article h3 { margin-top: 1.5rem; }
 .article p { margin: 0 0 1rem; }
 .article ul, .article ol { padding-left: 1.25rem; margin: 0 0 1rem; }
 .article li { list-style: disc; }
@@ -187,7 +195,7 @@
 
 .section-image {
   padding: 0;
-  margin: 4rem auto;
+  margin: 2rem auto auto auto;
   max-width: 90%; 
   /*width: 600px; */
   display: flex;
@@ -203,7 +211,7 @@
 
 .section-image img.horizontal {
   max-height: 380px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .section-image img.vertical {
