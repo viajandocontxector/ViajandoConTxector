@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
+  <!-- HOME -->
   <url>
     <loc>https://viajandocontxector.com/</loc>
     <priority>1.0</priority>
   </url>
-
+  <!-- RUTAS -->
   <url>
     <loc>https://viajandocontxector.com/rutas</loc>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://viajandocontxector.com/rutas/europa/paises-balticos-9-dias</loc>
     <priority>0.8</priority>
   </url>
-
+  <!-- LITUANIA -->
   <url>
     <loc>https://viajandocontxector.com/europa/lituania/vilna</loc>
     <priority>0.7</priority>
@@ -40,18 +39,33 @@
     <loc>https://viajandocontxector.com/europa/lituania/vilna/donde-comer-en-vilna</loc>
     <priority>0.8</priority>
   </url>
+  <!-- LETONIA -->
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga/que-ver-en-riga</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga/riga-en-1-2-y-3-dias</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga/excursion-a-gauja-desde-riga</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga/donde-alojarse-en-riga</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga/donde-comer-en-riga</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- <url>
-    <loc>https://viajandocontxector.com/europa/letonia/riga</loc>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://viajandocontxector.com/europa/letonia/vilna/que-ver-en-riga</loc>
-    <priority>0.8</priority>
-  </url>
-
-    <url>
     <loc>https://viajandocontxector.com/europa/estonia/tallin</loc>
     <priority>0.8</priority>
   </url>
@@ -70,7 +84,8 @@
     <loc>https://viajandocontxector.com/europa/finlandia/vilna/que-ver-en-helsinki</loc>
     <priority>0.8</priority>
   </url> -->
-
+  
+  <!-- SERVICIOS -->
   <url>
     <loc>https://viajandocontxector.com/servicio</loc>
     <priority>0.6</priority>
@@ -80,7 +95,8 @@
     <loc>https://viajandocontxector.com/contacto</loc>
     <priority>0.6</priority>
   </url>
-
+  
+  <!-- LEGALES Y BAJA PRIORIDAD -->
   <url>
     <loc>https://viajandocontxector.com/gracias</loc>
     <priority>0.1</priority>

@@ -14,6 +14,12 @@
     { "source": "/europa/lituania/vilna/vilna-en-1-y-2-dias/", "destination": "/europa/lituania/vilna/vilna-en-1-y-2-dias", "statusCode": 308 },
     { "source": "/europa/lituania/vilna/excursion-a-trakai-desde-vilna/", "destination": "/europa/lituania/vilna/excursion-a-trakai-desde-vilna", "statusCode": 308 },
     { "source": "/europa/lituania/vilna/donde-alojarse-en-vilna/", "destination": "/europa/lituania/vilna/donde-alojarse-en-vilna", "statusCode": 308 },
-    { "source": "/europa/lituania/vilna/donde-comer-en-vilna/", "destination": "/europa/lituania/vilna/donde-comer-en-vilna", "statusCode": 308 }
+    { "source": "/europa/lituania/vilna/donde-comer-en-vilna/", "destination": "/europa/lituania/vilna/donde-comer-en-vilna", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/", "destination": "/europa/letonia/riga", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/que-ver-en-riga/", "destination": "/europa/letonia/riga/que-ver-en-riga", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/riga-en-1-2-y-3-dias/", "destination": "/europa/letonia/riga/riga-en-1-2-y-3-dias", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/excursion-a-gauja-desde-riga/", "destination": "/europa/letonia/riga/excursion-a-gauja-desde-riga", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/donde-alojarse-en-riga/", "destination": "/europa/letonia/riga/donde-alojarse-en-riga", "statusCode": 308 },
+    { "source": "/europa/letonia/riga/donde-comer-en-riga/", "destination": "/europa/letonia/riga/donde-comer-en-riga", "statusCode": 308 }
   ]
 }
