@@ -10,6 +10,10 @@
     { "source": "/rutas/", "destination": "/rutas", "statusCode": 308 },
     { "source": "/rutas/europa/paises-balticos-9-dias/", "destination": "/rutas/europa/paises-balticos-9-dias", "statusCode": 308 },
     { "source": "/europa/lituania/vilna/", "destination": "/europa/lituania/vilna", "statusCode": 308 },
-    { "source": "/europa/lituania/vilna/que-ver-en-vilna/", "destination": "/europa/lituania/vilna/que-ver-en-vilna", "statusCode": 308 }
+    { "source": "/europa/lituania/vilna/que-ver-en-vilna/", "destination": "/europa/lituania/vilna/que-ver-en-vilna", "statusCode": 308 },
+    { "source": "/europa/lituania/vilna/vilna-en-1-y-2-dias/", "destination": "/europa/lituania/vilna/vilna-en-1-y-2-dias", "statusCode": 308 },
+    { "source": "/europa/lituania/vilna/excursion-a-trakai-desde-vilna/", "destination": "/europa/lituania/vilna/excursion-a-trakai-desde-vilna", "statusCode": 308 },
+    { "source": "/europa/lituania/vilna/donde-alojarse-en-vilna/", "destination": "/europa/lituania/vilna/donde-alojarse-en-vilna", "statusCode": 308 },
+    { "source": "/europa/lituania/vilna/donde-comer-en-vilna/", "destination": "/europa/lituania/vilna/donde-comer-en-vilna", "statusCode": 308 }
   ]
 }

@@ -8,7 +8,7 @@
 
   <url>
     <loc>https://viajandocontxector.com/rutas</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 
   <url>
@@ -18,13 +18,58 @@
 
   <url>
     <loc>https://viajandocontxector.com/europa/lituania/vilna</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://viajandocontxector.com/europa/lituania/vilna/que-ver-en-vilna</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna/vilna-en-1-y-2-dias</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna/excursion-a-trakai-desde-vilna</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna/donde-alojarse-en-vilna</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/lituania/vilna/donde-comer-en-vilna</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- <url>
+    <loc>https://viajandocontxector.com/europa/letonia/riga</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/europa/letonia/vilna/que-ver-en-riga</loc>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/vilna/que-ver-en-tallin</loc>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/vilna/que-ver-en-helsinki</loc>
+    <priority>0.8</priority>
+  </url> -->
 
   <url>
     <loc>https://viajandocontxector.com/servicio</loc>
@@ -38,22 +83,22 @@
 
   <url>
     <loc>https://viajandocontxector.com/gracias</loc>
-    <priority>0.4</priority>
+    <priority>0.1</priority>
   </url>
 
   <url>
     <loc>https://viajandocontxector.com/legal/aviso-legal</loc>
-    <priority>0.3</priority>
+    <priority>0.1</priority>
   </url>
 
   <url>
     <loc>https://viajandocontxector.com/legal/cookies</loc>
-    <priority>0.3</priority>
+    <priority>0.1</priority>
   </url>
 
   <url>
     <loc>https://viajandocontxector.com/legal/privacidad</loc>
-    <priority>0.3</priority>
+    <priority>0.1</priority>
   </url>
 
 </urlset>
