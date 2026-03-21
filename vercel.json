@@ -20,6 +20,20 @@
     { "source": "/europa/letonia/riga/riga-en-1-2-y-3-dias/", "destination": "/europa/letonia/riga/riga-en-1-2-y-3-dias", "statusCode": 308 },
     { "source": "/europa/letonia/riga/excursion-a-gauja-desde-riga/", "destination": "/europa/letonia/riga/excursion-a-gauja-desde-riga", "statusCode": 308 },
     { "source": "/europa/letonia/riga/donde-alojarse-en-riga/", "destination": "/europa/letonia/riga/donde-alojarse-en-riga", "statusCode": 308 },
-    { "source": "/europa/letonia/riga/donde-comer-en-riga/", "destination": "/europa/letonia/riga/donde-comer-en-riga", "statusCode": 308 }
+    { "source": "/europa/letonia/riga/donde-comer-en-riga/", "destination": "/europa/letonia/riga/donde-comer-en-riga", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/", "destination": "/europa/estonia/tallin", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/que-ver-en-tallin/", "destination": "/europa/estonia/tallin/que-ver-en-tallin", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/tallin-en-1-y-2-dias/", "destination": "/europa/estonia/tallin/tallin-en-1-y-2-dias", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/excursion-a-lahemaa-desde-tallin/", "destination": "/europa/estonia/tallin/excursion-a-lahemaa-desde-tallin", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/excursion-a-helsinki-desde-tallin/", "destination": "/europa/estonia/tallin/excursion-a-helsinki-desde-tallin", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/donde-alojarse-en-tallin/", "destination": "/europa/estonia/tallin/donde-alojarse-en-tallin", "statusCode": 308 },
+    { "source": "/europa/estonia/tallin/donde-comer-en-tallin/", "destination": "/europa/estonia/tallin/donde-comer-en-tallin", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/", "destination": "/europa/finlandia/helsinki", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/que-ver-en-helsinki/", "destination": "/europa/finlandia/helsinki/que-ver-en-helsinki", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/helsinki-en-1-dia/", "destination": "/europa/finlandia/helsinki/helsinki-en-1-dia", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/excursion-a-suomenlinna/", "destination": "/europa/finlandia/helsinki/excursion-a-suomenlinna", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/excursion-a-tallin-desde-helsinki/", "destination": "/europa/finlandia/helsinki/excursion-a-tallin-desde-helsinki", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/donde-alojarse-en-helsinki/", "destination": "/europa/finlandia/helsinki/donde-alojarse-en-helsinki", "statusCode": 308 },
+    { "source": "/europa/finlandia/helsinki/donde-comer-en-helsinki/", "destination": "/europa/finlandia/helsinki/donde-comer-en-helsinki", "statusCode": 308 }
   ]
 }

@@ -64,26 +64,64 @@
     <loc>https://viajandocontxector.com/europa/letonia/riga/donde-comer-en-riga</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- <url>
+  <!-- ESTONIA -->
+  <url>
     <loc>https://viajandocontxector.com/europa/estonia/tallin</loc>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://viajandocontxector.com/europa/estonia/vilna/que-ver-en-tallin</loc>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/que-ver-en-tallin</loc>
     <priority>0.8</priority>
   </url>
-
-    <url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/tallin-en-1-y-2-dias</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/excursion-a-lahemaa-desde-tallin</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/excursion-a-helsinki-desde-tallin</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/donde-alojarse-en-tallin</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/estonia/tallin/donde-comer-en-tallin</loc>
+    <priority>0.8</priority>
+  </url>
+  <!-- FINLANDIA -->
+  <url>
     <loc>https://viajandocontxector.com/europa/finlandia/helsinki</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/que-ver-en-helsinki</loc>
     <priority>0.8</priority>
   </url>
-
   <url>
-    <loc>https://viajandocontxector.com/europa/finlandia/vilna/que-ver-en-helsinki</loc>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/helsinki-en-1-dia</loc>
     <priority>0.8</priority>
-  </url> -->
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/excursion-a-suomenlinna</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/excursion-a-tallin-desde-helsinki</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/donde-alojarse-en-helsinki</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://viajandocontxector.com/europa/finlandia/helsinki/donde-comer-en-helsinki</loc>
+    <priority>0.8</priority>
+  </url>
   
   <!-- SERVICIOS -->
   <url>
