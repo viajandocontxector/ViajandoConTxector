@@ -50,7 +50,7 @@
           </div>
         </div>  
       </div>
-
+      <a href="/sobre-mi/" {% if page.url == "/sobre-mi/" %}aria-current="page"{% endif %}>Sobre mí</a>
       <a href="/servicio/" {% if page.url == "/servicio/" %}aria-current="page"{% endif %}>Servicio</a>
       <a href="/contacto/" {% if page.url == "/contacto/" %}aria-current="page"{% endif %}>Contacto</a>
     </nav>
@@ -102,7 +102,7 @@
         </ul>
       </li>
     </ul>
-
+    <a href="/sobre-mi/" class="mobile-link">Sobre mí</a>
     <a href="/servicio/" class="mobile-link">Servicio</a>
     <a href="/contacto/" class="mobile-link">Contacto</a>
   </nav>
